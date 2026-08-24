@@ -1,0 +1,154 @@
+html<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr. Amal KORRIDA | Portail Académique & Scientifique</title>
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --primary-dark: #11364f;
+            --secondary-color: #2e86c1;
+            --accent-color: #e67e22;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f4f6f7;
+            --white: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
+        a { text-decoration: none; color: var(--secondary-color); transition: color 0.3s ease; }
+        a:hover { color: var(--primary-dark); }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 2rem 0; }
+
+        /* HEADER */
+        header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
+        .logo h1 { font-size: 1.5rem; font-weight: 700; }
+        .logo p { font-size: 0.8rem; color: #d6e4ed; }
+        .nav-menu { display: flex; gap: 1.5rem; }
+        .nav-menu a { color: var(--white); font-size: 0.95rem; font-weight: 500; padding: 0.5rem 0.2rem; border-bottom: 2px solid transparent; }
+        .nav-menu a:hover, .nav-menu a.active { border-bottom: 2px solid var(--white); color: #d6e4ed; }
+
+        /* HERO */
+        #hero { background: linear-gradient(135deg, rgba(26,82,118,0.95) 0%, rgba(46,134,193,0.9) 100%); color: var(--white); padding: 4rem 0; text-align: center; }
+        .hero-content h2 { font-size: 2.2rem; margin-bottom: 1rem; }
+        .hero-content p { font-size: 1.1rem; max-width: 800px; margin: 0 auto 2rem auto; color: #eaeded; }
+        .orcid-badge { display: inline-flex; align-items: center; background-color: rgba(255, 255, 255, 0.15); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.3); color: var(--white); }
+
+        /* ACTUALITES */
+        .section-title { text-align: center; font-size: 1.8rem; color: var(--primary-color); margin-bottom: 2rem; position: relative; padding-bottom: 0.5rem; }
+        .section-title::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 3px; background-color: var(--accent-color); }
+        .news-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 1rem; }
+        .news-card { background-color: var(--bg-light); padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .news-card .badge { display: inline-block; background-color: var(--accent-color); color: var(--white); font-size: 0.75rem; font-weight: bold; padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.8rem; text-transform: uppercase; }
+        .news-card h3 { font-size: 1.15rem; margin-bottom: 0.5rem; color: var(--primary-dark); }
+
+        /* CONTACT LAYOUT */
+        #contact-accueil { background-color: var(--bg-light); }
+        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+        .info-box { background-color: var(--white); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .info-item { margin-bottom: 1.5rem; display: flex; flex-direction: column; }
+        .info-item strong { color: var(--primary-color); font-size: 0.9rem; text-transform: uppercase; margin-bottom: 0.3rem; }
+        .info-item p { font-size: 1.05rem; color: var(--text-dark); }
+        .map-box { border-radius: 8px; height: 320px; border: 1px solid #ccc; overflow: hidden; }
+
+        footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; font-size: 0.9rem; border-top: 4px solid var(--accent-color); }
+        @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } .contact-layout { grid-template-columns: 1fr; gap: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Pr. Amal KORRIDA</h1>
+                <p>Épidémiologie & Génétique Humaine | ISPITS Agadir</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html" class="active">Accueil</a>
+                <a href="enseignement.html">Enseignement</a>
+                <a href="recherche.html">Recherche</a>
+                <a href="publications.html">Publications</a>
+                <a href="ressources.html">Ressources</a>
+                <a href="institutionnel.html">Cadre & Associations</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container hero-content">
+            <h2>Bienvenue sur le Portail Académique & Scientifique</h2>
+            <p>
+                Maître de Conférences Habilité à l'ISPITS d'Agadir (Ministère de la Santé et de la Protection Sociale). 
+                Espace d'échange éducatif, de ressources bio-informatiques et de valorisation des axes de recherche translationnelle 
+                en biologie de la santé globale, épidémiologie et génétique moléculaire au Maroc.
+            </p>
+            <a href="https://orcid.org" target="_blank" class="orcid-badge">
+                🟢 Identifiant International ORCID : 0000-0003-2206-4964
+            </a>
+        </div>
+    </section>
+
+    <section id="actualites">
+        <div class="container">
+            <h2 class="section-title">Actualités Académiques</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <span class="badge">Enseignement</span>
+                    <h3>Ouverture des cours en Faculté</h3>
+                    <p>Dispense des nouveaux modules théoriques et Travaux Pratiques de Bio-informatique (S4) à la Faculté de Médecine et de Pharmacie d'Agadir.</p>
+                </div>
+                <div class="news-card">
+                    <span class="badge">Publication</span>
+                    <h3>Parution d'Ouvrage Collectif</h3>
+                    <p>Sortie du manuel de référence <em>« Recherche appliquée en sciences infirmières et techniques de santé »</em> (Éditions Universitaires Européennes, ISBN: 6206712362).</p>
+                </div>
+                <div class="news-card">
+                    <span class="badge">MARSH Association</span>
+                    <h3>Formations de Proximité</h3>
+                    <p>Lancement par la Moroccan Association for Research in Sciences and Health (MARSH) des nouveaux ateliers de mesure d'association via Epi Info.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-accueil">
+        <div class="container">
+            <h2 class="section-title">Fiche d'Information & Coordonnées</h2>
+            <div class="contact-layout">
+                <div class="info-box">
+                    <div class="info-item">
+                        <strong>Rattachement Principal</strong>
+                        <p>Institut Supérieur des Professions Infirmières et Techniques de Santé (ISPITS) d’Agadir.<br>Centre Hospitalier Régional Hassan II, Agadir, Maroc.</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>Tutelle Institutionnelle</strong>
+                        <p>Ministère de la Santé et de la Protection Sociale</p>
+                    </div>
+                    <div class="info-item">
+                        <strong>Courriels Académiques</strong>
+                        <p>
+                            <a href="mailto:a.korrida@uiz.ac.ma">a.korrida@uiz.ac.ma</a><br>
+                            <a href="mailto:amalkorrida11@aol.com">amalkorrida11@aol.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="map-box">
+                    <iframe src="https://google.com" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container" style="padding: 0;">
+            <p>&copy; 2026 - Portail Universitaire Éducatif Pr. Amal KORRIDA. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

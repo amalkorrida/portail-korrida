@@ -1,0 +1,161 @@
+html<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enseignement & Responsabilités | Pr. Amal KORRIDA</title>
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --primary-dark: #11364f;
+            --secondary-color: #2e86c1;
+            --accent-color: #e67e22;
+            --text-dark: #2c3e50;
+            --bg-light: #f4f6f7;
+            --white: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
+        a { text-decoration: none; color: var(--secondary-color); }
+        
+        /* HEADER */
+        header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
+        .logo h1 { font-size: 1.5rem; }
+        .logo p { font-size: 0.8rem; color: #d6e4ed; }
+        .nav-menu { display: flex; gap: 1.5rem; }
+        .nav-menu a { color: var(--white); font-size: 0.95rem; padding: 0.5rem 0.2rem; }
+        .nav-menu a.active { border-bottom: 2px solid var(--white); }
+
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; }
+        .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; }
+        
+        /* TABLEAU DES COURS */
+        .table-container { overflow-x: auto; margin-bottom: 3rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-radius: 8px; }
+        table { width: 100%; border-collapse: collapse; text-align: left; }
+        th, td { padding: 1rem; border-bottom: 1px solid #ddd; }
+        th { background-color: var(--primary-color); color: var(--white); }
+        tr:nth-child(even) { background-color: var(--bg-light); }
+        .btn-download { background-color: var(--secondary-color); color: var(--white); padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold; }
+        .btn-download:hover { background-color: var(--primary-dark); }
+
+        /* CARDS MASTER & GOUVERNANCE */
+        .grid-two { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .card { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; border-top: 4px solid var(--accent-color); }
+        .card h3 { color: var(--primary-dark); margin-bottom: 1rem; }
+        .card ul { list-style-type: square; margin-left: 1.5rem; margin-top: 1rem; }
+        .card li { margin-bottom: 0.5rem; }
+
+        footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 4rem; }
+        @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } .grid-two { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Pr. Amal KORRIDA</h1>
+                <p>Épidémiologie & Génétique Humaine | ISPITS Agadir</p>
+            </div>
+            <nav class="nav-menu">
+                <a href="index.html">Accueil</a>
+                <a href="enseignement.html" class="active">Enseignement</a>
+                <a href="recherche.html">Recherche</a>
+                <a href="publications.html">Publications</a>
+                <a href="ressources.html">Ressources</a>
+                <a href="institutionnel.html">Cadre & Associations</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- SECTION 1 : SYLLABUS -->
+        <h2 class="section-title">📚 Syllabus des Cours & Supports Didactiques</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Niveau / Filière</th>
+                        <th>Intitulé du Module / Compétence</th>
+                        <th>Semestre</th>
+                        <th>Support de Cours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Licence Professionnelle</td>
+                        <td>Sciences Biologiques (Biologie Cellulaire, Histologie, Immunologie)</td>
+                        <td>Semestre 1</td>
+                        <td><a href="#" class="btn-download">📄 Télécharger PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>Licence Professionnelle</td>
+                        <td>Microbiologie & Parasitologie Médicale</td>
+                        <td>Semestre 1</td>
+                        <td><a href="#" class="btn-download">📄 Télécharger PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>Licence Professionnelle</td>
+                        <td>Nutrition Humaine et Régimes Alimentaires</td>
+                        <td>Semestres 1, 2 & 3</td>
+                        <td><a href="#" class="btn-download">📄 Télécharger PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>Licence Professionnelle</td>
+                        <td>Génétique, Épigénétique et Allergies Alimentaires</td>
+                        <td>Semestre 3</td>
+                        <td><a href="#" class="btn-download">📄 Télécharger PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>Licence Professionnelle</td>
+                        <td>Statistiques Sanitaires et Indicateurs Hospitaliers</td>
+                        <td>Semestre 5</td>
+                        <td><a href="#" class="btn-download">📄 Télécharger PDF</a></td>
+                    </tr>
+                    <tr>
+                        <td>Master Spécialisé (PAO / LM-SSR)</td>
+                        <td>Méthodologie de la Recherche Clinique & Action</td>
+                        <td>Semestres 2 & 3</td>
+                        <td><a href="#" class="btn-download">📄 Télécharger PDF</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="grid-two">
+            <!-- SECTION 2 : MASTER -->
+            <div class="card">
+                <h3>🎓 Coordination du Master Spécialisé LM-SSR</h3>
+                <p>Le Pr. Korrida est la coordonnatrice pédagogique de la filière Master <strong>Leadership et Management en Santé Sexuelle et Reproductive</strong> à l'ISPITS d'Agadir.</p>
+                <ul>
+                    <li>Pilotage complet de l'accréditation ministérielle.</li>
+                    <li>Ingénierie curriculaire et création des descriptifs de modules.</li>
+                    <li>Supervision des Mémoires de Fin d'Études (MFE) et des stages de terrain.</li>
+                </ul>
+            </div>
+
+            <!-- SECTION 3 : GOUVERNANCE -->
+            <div class="card" style="border-top-color: var(--primary-color);">
+                <h3>🏛️ Conseil d'Établissement & Gouvernance</h3>
+                <p>Implication active dans l'administration et le développement stratégique institutionnel :</p>
+                <ul>
+                    <li><strong>Membre élue</strong> des Enseignants-Chercheurs au Conseil d'Établissement (2022-2025).</li>
+                    <li><strong>Coordonnatrice</strong> de la Commission Permanente de la Recherche et de la Valorisation Scientifique.</li>
+                    <li>Membre de la cellule de rédaction du Projet d'Établissement Quinquennal (2021-2026).</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - Portail Universitaire Éducatif Pr. Amal KORRIDA. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
