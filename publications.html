@@ -5,100 +5,54 @@ html<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications & Distinctions | Pr. Amal KORRIDA</title>
     <style>
-        :root {
-            --primary-color: #1a5276;
-            --primary-dark: #11364f;
-            --secondary-color: #2e86c1;
-            --accent-color: #e67e22;
-            --text-dark: #2c3e50;
-            --bg-light: #f4f6f7;
-            --white: #ffffff;
-            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
+        :root { --primary-color: #1a5276; --primary-dark: #11364f; --secondary-color: #2e86c1; --accent-color: #e67e22; --text-dark: #2c3e50; --bg-light: #f4f6f7; --white: #ffffff; --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
-        
         header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
-        .logo h1 { font-size: 1.5rem; }
-        .logo p { font-size: 0.8rem; color: #d6e4ed; }
         .nav-menu { display: flex; gap: 1.5rem; }
-        .nav-menu a { color: var(--white); font-size: 0.95rem; padding: 0.5rem 0.2rem; }
+        .nav-menu a { color: var(--white); font-size: 0.95rem; padding: 0.5rem 0.2rem; text-decoration: none; }
         .nav-menu a.active { border-bottom: 2px solid var(--white); }
-
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; }
         .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; }
-        
-        .pub-list { margin-bottom: 3rem; }
         .pub-item { background-color: var(--bg-light); padding: 1.5rem; border-radius: 6px; margin-bottom: 1rem; border-left: 4px solid var(--primary-color); }
         .pub-meta { font-size: 0.85rem; color: var(--secondary-color); font-weight: bold; margin-top: 0.5rem; }
         .pub-meta span { background-color: #ebf5fb; padding: 0.2rem 0.5rem; border-radius: 4px; margin-right: 0.5rem; }
-
         .grid-two { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
         .panel { padding: 1.5rem; border-radius: 8px; border: 1px solid #ddd; }
         .panel h3 { color: var(--primary-dark); margin-bottom: 1rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.3rem; }
         .panel ul { list-style-type: square; margin-left: 1.2rem; }
-        .panel li { margin-bottom: 0.8rem; }
-
         footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 4rem; }
         @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } .grid-two { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-
     <header>
         <div class="nav-container">
-            <div class="logo">
-                <h1>Pr. Amal KORRIDA</h1>
-                <p>Épidémiologie & Génétique Humaine | ISPITS Agadir</p>
+            <div class="logo" style="display: flex; align-items: center; gap: 15px;">
+                <div><h1 style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 0;">Pr. Amal KORRIDA</h1><p style="font-size: 0.8rem; color: #d6e4ed; margin: 0;">Épidémiologie & Génétique Humaine | ISPITS Agadir</p></div>
+                <img src="logo-personnel.png" alt="Logo" style="height: 55px; width: auto; background-color: var(--white); padding: 4px; border-radius: 6px;">
             </div>
             <nav class="nav-menu">
-                <a href="index.html">Accueil</a>
-                <a href="enseignement.html">Enseignement</a>
-                <a href="recherche.html">Recherche</a>
-                <a href="publications.html" class="active">Publications</a>
-                <a href="ressources.html">Ressources</a>
-                <a href="institutionnel.html">Cadre & Associations</a>
-                <a href="contact.html">Contact</a>
+                <a href="index.html">Accueil</a><a href="enseignement.html">Enseignement</a><a href="recherche.html">Recherche</a><a href="publications.html" class="active">Publications</a><a href="ressources.html">Ressources</a><a href="institutionnel.html">Cadre & Associations</a><a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
-
     <div class="container">
         <h2 class="section-title">📄 Articles Scientifiques Indexés (Scopus / WoS)</h2>
-        <div class="pub-list">
-            <div class="pub-item">
-                <p><strong>Al Wachami N, Korrida A, Chahboune M et al. (2024)</strong>. <em>Evaluating the Effectiveness of the COPD Assessment Test (CAT) in Screening for Chronic Obstructive Pulmonary Disease</em>. International Journal of Chronic Obstructive Pulmonary Disease, 19:1623-1633.</p>
-                <div class="pub-meta"><span>Impact Factor: 4.1</span><span>Quartile Q1</span></div>
-            </div>
-            <div class="pub-item">
-                <p><strong>Arraji M, Iderdar Y, Korrida A, Chahboune M et al. (2023)</strong>. <em>Translation, cultural adaptation and validation of the General Medication Adherence Scale (GMAS) in moroccan patients with type-2 diabetes</em>. BMC Nursing, 22(1):302.</p>
-                <div class="pub-meta"><span>Impact Factor: 5.2</span><span>Quartile Q1</span></div>
-            </div>
+        <div class="pub-item">
+            <p><strong>Al Wachami N, Korrida A et al. (2024)</strong>. <em>Evaluating the Effectiveness of the COPD Assessment Test (CAT)</em>. International Journal of COPD, 19:1623-1633.</p>
+            <div class="pub-meta"><span>Impact Factor: 4.1</span><span>Quartile Q1</span></div>
         </div>
-
+        <div class="pub-item">
+            <p><strong>Arraji M, Korrida A et al. (2023)</strong>. <em>Translation and validation of the General Medication Adherence Scale (GMAS)</em>. BMC Nursing, 22(1):302.</p>
+            <div class="pub-meta"><span>Impact Factor: 5.2</span><span>Quartile Q1</span></div>
+        </div>
         <div class="grid-two">
-            <div class="panel">
-                <h3>📚 Ouvrages Majeurs Édités</h3>
-                <ul>
-                    <li><strong>Livre Pédagogique (2024) :</strong> <em>« Recherche appliquée en sciences infirmières et techniques de santé »</em>. Éditions Universitaires Européennes. ISBN : 978-6206712367.</li>
-                    <li><strong>Chapitre Collectif (2024) :</strong> <em>« Protein-Energy Malnutrition in Free-Living Moroccan Elderly »</em>. AkiNik Publications, New Delhi.</li>
-                </ul>
-            </div>
-            <div class="panel" style="border-left: 4px solid var(--accent-color);">
-                <h3>🏆 Prix & Affiliations Émérites</h3>
-                <ul>
-                    <li><strong>Prix Scientifique (2022) :</strong> Prix de la Meilleure Communication Orale au Congrès International CIPRS22 (Casablanca).</li>
-                    <li><strong>Sociétés Savantes :</strong> Membre active de l'<em>European Society of Endocrinology (ESE)</em>.</li>
-                </ul>
-            </div>
+            <div class="panel"><h3>📚 Ouvrages Édités</h3><ul><li><em>« Recherche appliquée en sciences infirmières »</em> (2024). ISBN: 978-6206712367.</li></ul></div>
+            <div class="panel" style="border-left: 4px solid var(--accent-color);"><h3>🏆 Prix & Distinctions</h3><ul><li>Prix de la Meilleure Communication Orale au Congrès CIPRS22 (Casablanca).</li></ul></div>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2026 - Portail Universitaire Éducatif Pr. Amal KORRIDA. Tous droits réservés.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 - Portail Universitaire Pr. Amal KORRIDA.</p></footer>
 </body>
 </html>
