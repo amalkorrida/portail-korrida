@@ -5,57 +5,146 @@ html<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadre Réglementaire & Associations | Pr. Amal KORRIDA</title>
     <style>
-        :root { --primary-color: #1a5276; --primary-dark: #11364f; --secondary-color: #2e86c1; --accent-color: #e67e22; --text-dark: #2c3e50; --bg-light: #f4f6f7; --white: #ffffff; --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        :root {
+            --primary-color: #1a5276;
+            --primary-dark: #11364f;
+            --secondary-color: #2e86c1;
+            --accent-color: #e67e22;
+            --text-dark: #2c3e50;
+            --bg-light: #f4f6f7;
+            --white: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
         a { text-decoration: none; color: var(--secondary-color); }
-        header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; }
+        
+        /* HEADER */
+        header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
         .nav-menu { display: flex; gap: 1.5rem; }
         .nav-menu a { color: var(--white); font-size: 0.95rem; padding: 0.5rem 0.2rem; text-decoration: none; }
         .nav-menu a.active { border-bottom: 2px solid var(--white); }
+
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; }
         .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.5rem; }
+        
         .flex-section { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3.5rem; }
-        .full-section { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; margin-bottom: 3.5rem; border-top: 4px solid var(--accent-color); }
+        
         .card-inst { background-color: var(--white); border: 1px solid #ddd; padding: 1.5rem; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
         .card-inst h3 { color: var(--primary-dark); margin-bottom: 0.8rem; }
         .card-inst ul { list-style-type: square; margin-left: 1.3rem; }
+        .card-inst li { margin-bottom: 0.6rem; }
+        .doc-link { display: inline-block; margin-top: 0.5rem; font-weight: bold; color: var(--secondary-color); }
+        
         footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 4rem; }
-        @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } .flex-section { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } .flex-section { grid-template-columns: 1fr !important; } }
     </style>
 </head>
 <body>
+
     <header>
         <div class="nav-container">
             <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-                <div><h1 style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 0;">Pr. Amal KORRIDA</h1><p style="font-size: 0.8rem; color: #d6e4ed; margin: 0;">Épidémiologie & Génétique Humaine | ISPITS Agadir</p></div>
-                <img src="logo-personnel.png" alt="Logo" style="height: 55px; width: auto; background-color: var(--white); padding: 4px; border-radius: 6px;">
+                <div>
+                    <h1 style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 0;">Pr. Amal KORRIDA</h1>
+                    <p style="font-size: 0.8rem; color: #d6e4ed; margin: 0;">Épidémiologie & Génétique Humaine | ISPITS Agadir</p>
+                </div>
+                <img src="logo-personnel.png" alt="Logo Pr. Amal Korrida" style="height: 55px; width: auto; background-color: var(--white); padding: 4px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">
             </div>
             <nav class="nav-menu">
-                <a href="index.html">Accueil</a><a href="enseignement.html">Enseignement</a><a href="recherche.html">Recherche</a><a href="publications.html">Publications</a><a href="ressources.html">Ressources</a><a href="institutionnel.html" class="active">Cadre & Associations</a><a href="contact.html">Contact</a>
+                <a href="index.html">Accueil</a>
+                <a href="enseignement.html">Enseignement</a>
+                <a href="recherche.html">Recherche</a>
+                <a href="publications.html">Publications</a>
+                <a href="ressources.html">Ressources</a>
+                <a href="institutionnel.html" class="active">Cadre & Associations</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
+
     <div class="container">
-        <h2 class="section-title">⚖️ Textes Réglementaires</h2>
+        
+        <!-- AXE 6 : TEXTES REGLEMENTAIRES -->
+        <h2 class="section-title">⚖️ Textes Réglementaires & Veille Juridique</h2>
         <div class="flex-section">
-            <div class="card-inst"><h3>Gouvernance ISPITS</h3><ul><li>Règlement Intérieur National des ISPITS (2022-2023).</li></ul></div>
-            <div class="card-inst"><h3>Protocoles de Santé</h3><ul><li>Dispositif Minimum d'Urgence en Santé Sexuelle (DMU/SSR).</li></ul></div>
-        </div>
-        <h2 class="section-title">🤝 MARSH Association</h2>
-        <div class="full-section" style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div style="background-color: var(--white); padding: 15px; border-radius: 6px; text-align: center; border: 1px solid #ddd;"><img src="logo-marsh.png" alt="Logo MARSH" style="max-height: 150px; display: block; margin: 0 auto;"></div>
-            <p>Fondée et présidée à l'échelle nationale par le <strong>Pr. Amal Korrida</strong>, la <strong>MARSH</strong> dynamise la recherche translationnelle en sciences de la santé.</p>
-        </div>
-        <h2 class="section-title">🦅 Volet Conservation (IFCDW)</h2>
-        <div class="card-inst" style="border-top: 4px solid #27ae60; padding: 2rem;">
-            <div class="flex-section" style="grid-template-columns: 0.5fr 1.5fr; gap: 2rem; margin-bottom: 0; align-items: center;">
-                <div style="background-color: var(--white); padding: 10px; text-align: center;"><img src="logo-ifcdw.png" alt="Logo IFCDW" style="max-height: 140px; display: block; margin: 0 auto;"></div>
-                <div><p>Directrice du Laboratoire de Génétique Moléculaire au sein de l'<strong>IFCDW</strong> de 1999 à 2012 pour la conservation de la faune sauvage (Outarde Houbara).</p></div>
+            <div class="card-inst">
+                <h3>Gouvernance & Études ISPITS</h3>
+                <p>Documents de référence concernant l'organisation des examens et le cadre d'évaluation LMD au Maroc :</p>
+                <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                    <li>Règlement Intérieur National des ISPITS (Révision 2022-2023).</li>
+                    <li>Décrets de structuration du cycle Licence, Master et Doctorat.</li>
+                </ul>
+                <a href="#" class="doc-link">📂 Consulter le dossier réglementaire →</a>
+            </div>
+            <div class="card-inst">
+                <h3>Protocoles Nationaux de Santé</h3>
+                <p>Guides de prise en charge édités par le Ministère de la Santé et de la Protection Sociale :</p>
+                <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                    <li>Dispositif Minimum d'Urgence en Santé Sexuelle et Reproductive (DMU/SSR).</li>
+                    <li>Guide de prise en charge syndromique des Infections Sexuellement Transmitibles (IST).</li>
+                </ul>
+                <a href="#" class="doc-link">📂 Ouvrir les guides cliniques →</a>
             </div>
         </div>
+
+        <!-- AXE 7 : ASSOCIATION MARSH -->
+        <h2 class="section-title">🤝 Moroccan Association for Research in Sciences and Health (MARSH)</h2>
+        <div class="full-section" style="background-color: var(--bg-light); padding: 2rem; border-radius: 8px; margin-bottom: 3.5rem; border-top: 4px solid var(--accent-color); display: flex; flex-direction: column; gap: 1.5rem;">
+            
+            <!-- Cadre blanc isolé pour le logo MARSH -->
+            <div style="background-color: #ffffff; padding: 20px; border-radius: 8px; border: 1px solid #ddd; text-align: center;">
+                <img src="logo-marsh.png" alt="Logo MARSH" style="width: auto; height: auto; max-height: 160px; max-width: 100%; display: inline-block;">
+            </div>
+
+            <div>
+                <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+                    Fondée et présidée à l'échelle nationale par le <strong>Pr. Amal Korrida</strong>, la <strong>MARSH</strong> a pour but de dynamiser la recherche translationnelle en créer des synergies concrètes entre professionnels de santé hospitaliers, infirmiers praticiens et biologistes de laboratoire.
+                </p>
+                <div class="flex-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                    <div class="card-inst" style="background-color: var(--white); border: 1px solid #ddd; padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                        <h4 style="color: var(--primary-dark); margin-bottom: 0.5rem;">Missions Fondatrices</h4>
+                        <p style="font-size: 0.95rem; margin: 0;">Vulgarisation scientifique, formation continue aux outils de biostatistiques et accompagnement méthodologique des jeunes chercheurs de la région.</p>
+                    </div>
+                    <div class="card-inst" style="background-color: var(--white); border: 1px solid #ddd; padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                        <h4 style="color: var(--primary-dark); margin-bottom: 0.5rem;">Événements Récents</h4>
+                        <p style="font-size: 0.95rem; margin: 0;">Organisation des cycles de conférences "Nutrition, Métabolisme et Ramadan" et d'ateliers pratiques d'initiation à la saisie de données sur Epi Info.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AXE 8 : IFCDW -->
+        <h2 class="section-title">🦅 Volet Conservation & Expertise Internationale (IFCDW)</h2>
+        <div class="card-inst" style="background-color: var(--white); border: 1px solid #ddd; padding: 2rem; border-radius: 8px; border-top: 4px solid #27ae60; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                
+                <!-- Cadre blanc isolé pour le logo IFCDW -->
+                <div style="background-color: #ffffff; padding: 15px; border-radius: 8px; border: 1px solid #eee; text-align: center;">
+                    <img src="logo-ifcdw.png" alt="Logo IFCDW" style="width: auto; height: auto; max-height: 140px; max-width: 100%; display: inline-block;">
+                </div>
+                
+                <!-- Bloc Texte descriptif -->
+                <div>
+                    <p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                        Forte d'un parcours d'excellence historique de 1999 à 2012 en tant que <strong>Biologiste-Généticienne et Directrice du Laboratoire de Génétique Moléculaire</strong> au sein de la prestigieuse <em>HRH Prince Sultan Bin Abdul Aziz AL SAUD International Foundation for Conservation and Development of Wildlife (IFCDW)</em>, le Pr. Korrida met à profit cette expertise de pointe en génétique des populations.
+                    </p>
+                    <ul style="list-style-type: square; margin-left: 1.5rem; padding: 0;">
+                        <li style="margin-bottom: 0.6rem;"><strong>Génétique de la Conservation :</strong> Gestion des plans d'accouplement en captivité et des banques d'ADN moléculaires de l'Outarde Houbara (<em>Chlamydotis undulata</em>).</li>
+                        <li style="margin-bottom: 0.6rem;"><strong>Rapports Internationaux d'Expertise :</strong> Rapports de structuration génétique et de parenté via marqueurs microsatellites pour le National Wildlife Research Center (Taif, Arabie Saoudite) et études populationnelles sur la <em>Gazella dorcas</em> au Maroc.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
     </div>
-    <footer><p>&copy; 2026 - Portail Universitaire Pr. Amal KORRIDA.</p></footer>
+
+    <footer>
+        <p>&copy; 2026 - Portail Universitaire Éducatif Pr. Amal KORRIDA. Tous droits réservés.</p>
+    </footer>
+
 </body>
 </html>
