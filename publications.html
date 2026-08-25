@@ -32,9 +32,10 @@ html<!DOCTYPE html>
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; }
         .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.4rem; }
         .pub-list { margin-bottom: 3rem; }
-        .pub-card { background-color: var(--bg-light); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.2rem; border-left: 5px solid var(--primary-color); box-shadow: 0 2px 5px rgba(0,0,0,0.02); }
-        .pub-card p { font-size: 1rem; color: var(--text-dark); }
-        .pub-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; font-size: 0.8rem; font-weight: bold; }
+        .pub-card { background-color: var(--bg-light); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.2rem; border-left: 5px solid var(--primary-color); box-shadow: 0 2px 5px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 0.8rem; }
+        .pub-card p { font-size: 1rem; color: var(--text-dark); margin: 0; }
+        .pub-meta-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .pub-meta { display: flex; flex-wrap: wrap; gap: 0.5rem; font-size: 0.8rem; font-weight: bold; }
         .pub-meta span { padding: 0.2rem 0.6rem; border-radius: 4px; color: var(--white); }
         .badge-issn { background-color: #34495e; }
         .badge-if { background-color: var(--accent-color); }
@@ -44,8 +45,10 @@ html<!DOCTYPE html>
         .badge-q3 { background-color: var(--q3-color); }
         .badge-q4 { background-color: var(--q4-color); }
         .badge-report { background-color: #d35400; }
+        .btn-pdf { background-color: #2e86c1; color: #ffffff !important; padding: 0.3rem 0.8rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold; display: inline-flex; align-items: center; gap: 5px; transition: background-color 0.2s; }
+        .btn-pdf:hover { background-color: var(--primary-dark); }
         footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 4rem; }
-        @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } }
+        @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } .pub-meta-row { flex-direction: column; align-items: flex-start; gap: 0.8rem; } .btn-pdf { width: 100%; justify-content: center; } }
     </style>
 </head>
 <body>
@@ -56,7 +59,7 @@ html<!DOCTYPE html>
                     <h1 style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 0;">Pr. Amal KORRIDA</h1>
                     <p style="font-size: 0.8rem; color: #d6e4ed; margin: 0;">Épidémiologie & Génétique Humaine | ISPITS Agadir</p>
                 </div>
-                <img src="logo-personnel.png" alt="Logo Pr. Amal Korrida" style="height: 55px; width: auto; background-color: var(--white); padding: 4px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">
+                <img src="logo-personnel.png" alt="Logo" style="height: 55px; width: auto; background-color: var(--white); padding: 4px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">
             </div>
             <nav class="nav-menu">
                 <a href="index.html">Accueil</a>
@@ -70,119 +73,224 @@ html<!DOCTYPE html>
         </div>
     </header>
     <div class="container">
-        <h2 class="section-title">📄 Articles dans des Revues Internationales Indexées (Scopus / WoS)</h2>
+        <h2 class="section-title">📄 Production Scientifique & Travaux de Recherche</h2>
         <div class="pub-list">
+            <!-- 2026 -->
             <div class="pub-card">
                 <p><strong>Lahrach M &amp; Korrida A (2026)</strong>. L’acculturation des étudiants internationaux suivant leurs études à l’Institut Supérieur des Professions Infirmières et Techniques de Santé d’Agadir. <em>Revue Marocaine de Didactique et Pédagogie</em>, 5(1):41-45.</p>
-                <div class="pub-meta"><span class="badge-issn">ISSN: 2737-873X</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-issn">ISSN: 2737-873X</span></div>
+                    <a href="lahrach-2026.pdf" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2024 -->
             <div class="pub-card">
                 <p><strong>Al Wachami N, Boumendil K, Arraji M, Iderdar Y, Mourajid Y, Ghosne N, Benmoussa A, Khalis M, Korrida A, Laamiri FZ, Lajane H, Louerdi ML, El Madani S, Chahboune M (2024)</strong>. Evaluating the Effectiveness of the COPD Assessment Test (CAT) in Screening for Chronic Obstructive Pulmonary Disease. <em>International Journal of Chronic Obstructive Pulmonary Disease</em>, 19:1623-1633.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (IF): 4.1</span><span class="badge-q1">Quartile Q1</span><span class="badge-issn">ISSN: 1178-2005</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">IF: 4.1</span><span class="badge-q1">Quartile Q1</span><span class="badge-issn">ISSN: 1178-2005</span></div>
+                    <a href="https://doi.org" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
             <div class="pub-card">
                 <p><strong>Bouchriti Y, Ait Haddou M, Achbani A, Korrida A, Sine H, Rida J, Boukrim M, Kabbachi B (2024)</strong>. Assessing the Short- and Long-Term Health Effects of Nitrogen Dioxide in Agadir, Morocco: A WHO AirQ+ Model Application. <em>Applied Environmental Research</em>, 46(3):035.</p>
-                <div class="pub-meta"><span class="badge-scopus">IF/CiteScore: 1.9</span><span class="badge-q3">Quartile Q3</span><span class="badge-issn">ISSN: 2287-0741</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-scopus">CiteScore: 1.9</span><span class="badge-q3">Quartile Q3</span><span class="badge-issn">ISSN: 2287-0741</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2023 -->
             <div class="pub-card">
                 <p><strong>Arraji M, Iderdar Y, Mourajid Y, Guennouni M, Boumendil K, Korrida A, El Khoudri N, Ifleh M, Khalis M, Chahboune M (2023)</strong>. Translation, cultural adaptation and validation of the General Medication Adherence Scale (GMAS) in moroccan patients with type-2 diabetes. <em>BMC Nurs</em>, 22(1):302.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (IF): 5.2</span><span class="badge-q1">Quartile Q1</span><span class="badge-issn">ISSN : 1472-6955</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">IF: 5.2</span><span class="badge-q1">Quartile Q1</span><span class="badge-issn">ISSN: 1472-6955</span></div>
+                    <a href="https://doi.org" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
             <div class="pub-card">
                 <p><strong>Bouchriti Y, Korrida A, Haddou MA, Achbani A, Sine H, Rida J, Sine H, Amiha R, Kabbachi B (2023)</strong>. Mortality and morbidity assessment attributed to short- and long-term exposure to fine particles in ambient air of Agadir city, Morocco: The AirQ model approach. <em>Environmental Analysis Health and Toxicology</em>, 38(2):e2023009-0.</p>
-                <div class="pub-meta"><span class="badge-scopus">IF/CiteScore 1.0</span><span class="badge-issn">ISSN : 2671-9525</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-scopus">CiteScore 1.0</span><span class="badge-issn">ISSN: 2671-9525</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
-            <div class="pub-card">
+            html            <div class="pub-card">
                 <p><strong>Bouchriti Y, Korrida A, Ait Haddou M, Achbani A, Sine H, Rida J, Sine H, Amiha R, Kabbachi B (2023)</strong>. Assessment of health impact of the surface ozone on a population residing at Agadir city (Morocco) using the AirQ+ model. <em>E3S Web of Conferences</em>, 364, 02003.</p>
-                <div class="pub-meta"><span class="badge-scopus">Actes de Conférences (SJR: 0.20)</span><span class="badge-issn">ISSN : 2267-1242</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-scopus">SJR: 0.20</span><span class="badge-issn">ISSN: 2267-1242</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2022 -->
             <div class="pub-card">
                 <p><strong>Wenne R, Zbawicka M, Prądzińska A, Kotta J, Herkül K, Gardner JPA, Apostolidis AP, Poćwierz-Kotus A, Rouane-Hacene O, Korrida A, Dondero F, Baptista M, Reizopoulou S, Hamer B, Sundsaasen KK, Árnyasi M, Kent MP (2022)</strong>. Molecular genetic differentiation of native populations of Mediterranean blue mussels, Mytilus galloprovincialis Lamarck, 1819, and the relationship with environmental variables. <em>The European Zoological Journal</em>, 89(1): 755-784.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (IF): 1.9</span><span class="badge-q2">Quartile Q2</span><span class="badge-issn">ISSN: 2475-0263</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">IF: 1.9</span><span class="badge-q2">Quartile Q2</span><span class="badge-issn">ISSN: 2475-0263</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
             <div class="pub-card">
                 <p><strong>Korrida A, Idbibine M, El Abdellaoui A (2022)</strong>. Statut d’activité physique chez une population résidente au Souss-Massa, Maroc. <em>Science &amp; Sports</em>, 37(8): 728-735.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (IF): 1.2</span><span class="badge-q4">Quartile Q4</span><span class="badge-issn">ISSN: 0765-1597</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">IF: 1.2</span><span class="badge-q4">Quartile Q4</span><span class="badge-issn">ISSN: 0765-1597</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2021 -->
             <div class="pub-card">
                 <p><strong>Korrida A, Bnin M, Achablou N, Assahal R (2021)</strong>. Évaluation du risque cardiovasculaire chez les sujets asymptomatiques résidents au Sud du Maroc. <em>Médecine des Maladies Métaboliques</em>, 15(7): 709-715.</p>
-                <div class="pub-meta"><span class="badge-scopus">Impact CiteScore: 0.4</span><span class="badge-issn">ISSN : 1957-2557</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-scopus">CiteScore: 0.4</span><span class="badge-issn">ISSN: 1957-2557</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
-            html            <div class="pub-card">
+            <!-- 2020 -->
+            <div class="pub-card">
                 <p><strong>Aznag FZ, Elouilamine E, Korrida A, Izaabel EH (2020)</strong>. Polymorphisms in the tumor necrosis factor genes are associated with breast cancer in Moroccan population. <em>Genetic Testing And Molecular Biomarkers</em>, 24(9): 592-599.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (IF): 1.2</span><span class="badge-q3">Quartile Q3</span><span class="badge-issn">ISSN: 1945-0265</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">IF: 1.2</span><span class="badge-q3">Quartile Q3</span><span class="badge-issn">ISSN: 1945-0265</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2019 -->
             <div class="pub-card">
                 <p><strong>Aznag FZ, Moutaouafik MT, Korrida A, Izaabel EH (2019)</strong>. Genetic Distribution of the LTA +252 A&gt;G and TNFA -308 G &gt;A Polymorphisms in the Moroccan Population. <em>Genetic Testing And Molecular Biomarkers</em>, 23(12).</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (JIF): 1.35</span><span class="badge-q3">Quartile Q3</span><span class="badge-issn">ISSN: 1945-0265</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">JIF: 1.35</span><span class="badge-q3">Quartile Q3</span><span class="badge-issn">ISSN: 1945-0265</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2018 -->
             <div class="pub-card">
                 <p><strong>Korrida A, Benameur B, Filali K, Jadallah SJ (2018)</strong>. Genetic diversity management of Moroccan captive-bred houbaras. <em>Open Journal of Applied Sciences</em>, 8.</p>
-                <div class="pub-meta"><span class="badge-issn">ISSN: 2165-3925</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-issn">ISSN: 2165-3925</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2017 -->
             <div class="pub-card">
                 <p><strong>Korrida A (2017)</strong>. Rates and risk factors in macrosomic newborns among non-diabetic parturients at Tiznit city, Morocco. A case-control study. <em>Open Access Library Journal</em>, 4.</p>
-                <div class="pub-meta"><span class="badge-issn">ISSN: 2333-9721</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-issn">ISSN: 2333-9721</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2016 -->
             <div class="pub-card" style="border-left: 5px solid var(--q1-color);">
                 <p><strong>Korrida A (2016)</strong>. <em>Conservation in situ des Houbara au Maroc. Outarde Houbara : études génétique, morphométrique et phylogéographique</em>. Noor Publishing, Allemagne (Ouvrage).</p>
-                <div class="pub-meta"><span class="badge-q1">Ouvrage Scientifique / Monographie</span><span class="badge-issn">ISBN : 978-3-330-79689-8</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-q1">Monographie</span><span class="badge-issn">ISBN: 978-3-330-79689-8</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Consulter l'Ouvrage</a>
+                </div>
             </div>
+            html            <!-- 2014 -->
             <div class="pub-card">
                 <p><strong>Korrida A &amp; Schweizer M (2014)</strong>. Diversification across the Palearctic desert belt throughout the Pleistocene: phylogeography, demographic history and genetic structure in the Houbara-Macqueen’s bustard complex as revealed by mitochondrial DNA. <em>Journal of Zoological Systematics and Evolutionary Research</em>, 52(1): 65-74.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (JIF): 2.4</span><span class="badge-issn">ISSN: 0947-5745</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">JIF: 2.4</span><span class="badge-issn">ISSN: 0947-5745</span></div>
+                    <a href="https://doi.org" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2013 -->
             <div class="pub-card">
                 <p><strong>Korrida A, Gutierrez JP, Aggrey SE, Amin-Alami A (2013)</strong>. Genetic variability characterization of the Moroccan Houbara Bustard (Chlamydotis undulata undulata) inferred from pedigree analysis. <em>Zoo Biology</em>, 32(4): 366-373.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (JIF): 1.2</span><span class="badge-q3">Quartile Q3</span><span class="badge-issn">ISSN: 1098-2361</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">JIF: 1.2</span><span class="badge-q3">Quartile Q3</span><span class="badge-issn">ISSN: 1098-2361</span></div>
+                    <a href="https://doi.org" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2012 -->
             <div class="pub-card">
                 <p><strong>Korrida A, Jadallah S, Chbel F, Amin-Alami A, Ahra M, Aggrey S (2012)</strong>. Patterns of genetic diversity and population structure of the threatened Houbara and Macqueen’s bustards as revealed by microsatellite markers. <em>Genetics and Molecular Research</em>, 11(3): 3207-3221.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (JIF): 0.8</span><span class="badge-issn">ISSN: 1676-5680</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">JIF: 0.8</span><span class="badge-issn">ISSN: 1676-5680</span></div>
+                    <a href="https://doi.org" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
             <div class="pub-card">
                 <p><strong>Korrida A, Nahashon SN, Amin-Alami A, Aggrey SE (2012)</strong>. Modeling absolute and allometric growth in Houbara Bustard (Chlamydotis undulata undulata) in captivity. <em>Atlas Journal of Biology</em>, 2(1): 94-99.</p>
-                <div class="pub-meta"><span class="badge-issn">ISSN: 2158-9151</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-issn">ISSN: 2158-9151</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2010 -->
             <div class="pub-card">
                 <p><strong>Korrida A, Jadallah SJ, Izaabel H, Benhissoune S (2010)</strong>. Genetic diversity analysis of the natural populations of Mediterranean mussels (Mytilus galloprovincialis Lmk) in Agadir bay: Assessment of the molecular polymorphism and environmental impact. <em>KBM Journal of Biology</em>, 1(2):18-25.</p>
-                <div class="pub-meta"><span class="badge-issn">ISSN: 1949-0135</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-issn">ISSN: 1949-0135</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2008 -->
             <div class="pub-card" style="border-left: 5px solid var(--badge-report);">
                 <p><strong>Korrida A, Jadallah J, Benheman R, Elmehrach K, Ribi M (2008)</strong>. <em>Moroccan Gazella dorcas: Study of genetic structure and polymorphism for a conservation purpose</em>.</p>
-                <div class="pub-meta"><span class="badge-report">Rapport scientifique officiel pour le Haut Commissariat aux Eaux et Forêts</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-report">Rapport Scientifique - Eaux &amp; Forêts</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Lire le Rapport</a>
+                </div>
             </div>
+            <!-- 2005-2007 -->
             <div class="pub-card" style="border-left: 5px solid var(--badge-report);">
-                <p><strong>Korrida A &amp; Informatique (2005-2007)</strong>. <em>Official reports to the National Wildlife Research Center (Taif, KSA) on Macqueen’s (Chlamydotis macqueenii) paternity analysis and pedigree inferred from microsatellite markers</em>.</p>
-                <div class="pub-meta"><span class="badge-report">Rapports d'Expertise Institutionnels Internationaux</span></div>
+                <p><strong>Korrida A &amp; Équipe Informatique (2005-2007)</strong>. <em>Official reports to the National Wildlife Research Center (Taif, KSA) on Macqueen’s (Chlamydotis macqueenii) paternity analysis and pedigree inferred from microsatellite markers</em>.</p>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-report">Expertises Internationales NWRC</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Lire l'Expertise</a>
+                </div>
             </div>
+            <!-- 2004 -->
             <div class="pub-card">
-                <p><strong>Idaghdour Y, Broderick D, Korrida A, Chbel F (2004)</strong>. Mitochondrial Control Region diversity of the Houbara Bustard Chlamydotis undulata complex and genetic structure along the Atlantic seaboard of North Africa. <em>Molecular Ecology</em>, 13, 43-54.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (JIF): 4.9</span><span class="badge-q1">Quartile Q1</span><span class="badge-issn">ISSN: 1365-294X</span></div>
+                <p><strong>Idaghdour Y, Broderick D, Korrida A, Chbel F (2004)</strong>. Mitochondrial Control Region diversity of the Houbara Bustard Chlamydotis undulata complex and genetic structure along the Atlantic seaboard of North Africa. <em>Molecular Ecology</em>, 13: 43-54.</p>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">JIF: 4.9</span><span class="badge-q1">Quartile Q1</span><span class="badge-issn">ISSN: 1365-294X</span></div>
+                    <a href="https://doi.org" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2003 -->
             <div class="pub-card">
                 <p><strong>Idaghdour Y, Broderick D, Korrida A (2003)</strong>. Faeces as a source of DNA for molecular studies in a threatened population of Great Bustards. <em>Conservation Genetics</em>, 4:789-792.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (JIF): 2.1</span><span class="badge-q2">Quartile Q2</span><span class="badge-issn">ISSN: 1566-0621</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">JIF: 2.1</span><span class="badge-q2">Quartile Q2</span><span class="badge-issn">ISSN: 1566-0621</span></div>
+                    <a href="https://doi.org" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
             <div class="pub-card">
                 <p><strong>Broderick D, Idaghdour Y, Korrida A, Hellmich J (2003)</strong>. Gene flow in Great Bustard populations across the strait of Gibraltar as elucidated from excremental PCR and mtDNA sequencing. <em>Conservation Genetics</em>, 4:793-800.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (JIF): 2.1</span><span class="badge-q2">Quartile Q2</span><span class="badge-issn">ISSN: 1566-0621</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">JIF: 2.1</span><span class="badge-q2">Quartile Q2</span><span class="badge-issn">ISSN: 1566-0621</span></div>
+                    <a href="https://doi.org" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2002 -->
             <div class="pub-card">
-                <p><strong>Chbel F, Broderick D, Idaghdour Y, Korrida A, McCormick P (2002)</strong>. Characterization of 22 microsatellites loci from the endangered Houbara Bustard (Chlamydotis undulata undulata). <em>Molecular Ecology Notes</em>, 2, 484-487.</p>
-                <div class="pub-meta"><span class="badge-if">Facteur d’Impact (JIF): 7.1</span><span class="badge-q1">Quartile Q1</span><span class="badge-issn">ISSN: 1471-8278</span></div>
+                <p><strong>Chbel F, Broderick D, Idaghdour Y, Korrida A, McCormick P (2002)</strong>. Characterization of 22 microsatellites loci from the endangered Houbara Bustard (Chlamydotis undulata undulata). <em>Molecular Ecology Notes</em>, 2: 484-487.</p>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-if">JIF: 7.1</span><span class="badge-q1">Quartile Q1</span><span class="badge-issn">ISSN: 1471-8278</span></div>
+                    <a href="https://doi.org" target="_blank" class="btn-pdf">📄 Full-Text (PDF)</a>
+                </div>
             </div>
+            <!-- 2001 -->
             <div class="pub-card" style="border-left: 5px solid var(--badge-report);">
                 <p><strong>Broderick D &amp; Korrida A (2001)</strong>. <em>Genetic Diversity in the last remaining wild population of Bald Ibis (Geronticus eremita) preliminary results inferred from mtDNA sequence data</em>. IAGNBI newsletter 1: 25-26.</p>
-                <div class="pub-meta"><span class="badge-report">Rapport de Réseau de Recherche International</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-report">Rapport Réseau International</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Lire le Rapport</a>
+                </div>
             </div>
+            <!-- 1999 -->
             <div class="pub-card" style="border-left: 5px solid var(--badge-report);">
                 <p><strong>Idaghdour Y, Korrida A, Dawson RJG (1999)</strong>. <em>Genetic Diversity in Houbara Bustard Captive Breeding Flock: IFCDW Annual Report</em>. Morrigan Press, Northern Ireland.</p>
-                <div class="pub-meta"><span class="badge-report">Rapport d'Activité Scientifique Édité</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-report">Rapport Édité - IFCDW</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Lire le Rapport</a>
+                </div>
             </div>
             <div class="pub-card" style="border-left: 5px solid var(--badge-report);">
                 <p><strong>Dawson RJG, Idaghdour Y, Korrida A, Jones C (1999)</strong>. <em>Molecular Genetics Analysis of Houbara Bustard Population: IFCDW Annual Report</em>. Morrigan Press, Northern Ireland.</p>
-                <div class="pub-meta"><span class="badge-report">Rapport d'Activité Scientifique Édité</span></div>
+                <div class="pub-meta-row">
+                    <div class="pub-meta"><span class="badge-report">Rapport Édité - IFCDW</span></div>
+                    <a href="#" target="_blank" class="btn-pdf">📄 Lire le Rapport</a>
+                </div>
             </div>
         </div>
     </div>
