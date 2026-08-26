@@ -20,7 +20,6 @@ html<!DOCTYPE html>
         body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
         a { text-decoration: none; color: var(--secondary-color); }
         
-        /* HEADER & NAVIGATION */
         header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
         .logo h1 { font-size: 1.5rem; font-weight: 700; }
@@ -30,18 +29,15 @@ html<!DOCTYPE html>
         .nav-menu a.active { border-bottom: 2px solid var(--white); font-weight: 600; }
         .nav-menu a:hover { color: #d6e4ed; }
 
-        /* HERO SECTION */
         .hero { background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-color) 100%); color: var(--white); padding: 5rem 5%; text-align: center; }
         .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem; color: #d6e4ed; }
 
-        /* MAIN CONTENT STRUCTURE */
         .main-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 2.5rem; width: 90%; max-width: 1200px; margin: 3rem auto; }
         
         .welcome-section h3 { color: var(--primary-color); font-size: 1.6rem; margin-bottom: 1.5rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; }
         .welcome-section p { margin-bottom: 1.2rem; text-align: justify; font-size: 1.05rem; }
         
-        /* FICHE D'INFORMATIONS ACCUEIL */
         .info-sidebar { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; border-top: 5px solid var(--accent-color); box-shadow: 0 4px 10px rgba(0,0,0,0.05); height: fit-content; }
         .info-sidebar h4 { color: var(--primary-dark); font-size: 1.2rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid #d5dbdb; padding-bottom: 0.5rem; }
         
@@ -50,13 +46,8 @@ html<!DOCTYPE html>
         .info-block p { font-size: 0.95rem; color: var(--text-dark); font-weight: 500; line-height: 1.4; }
         .info-block .coordinatrice-title { color: var(--primary-color); font-weight: 700; margin-bottom: 0.5rem; }
 
-        .email-link { color: var(--secondary-color); font-weight: 600; display: block; margin-top: 0.2rem; }
-        .email-link:hover { text-decoration: underline; }
-
-        /* FOOTER */
         footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 5rem; }
 
-        /* RESPONSIVE LAYOUT */
         @media (max-width: 950px) {
             .nav-container { flex-direction: column; gap: 1rem; }
             .main-layout { grid-template-columns: 1fr; gap: 2rem; }
@@ -81,7 +72,7 @@ html<!DOCTYPE html>
                 <a href="recherche.html">Recherche</a>
                 <a href="publications.html">Publications</a>
                 <a href="ressources.html">Ressources</a>
-                <a href="institutionnel.html">Cadre & Associations</a>
+                <a href="institutionnel.html">Cadre &amp; Associations</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
@@ -89,45 +80,28 @@ html<!DOCTYPE html>
 
     <section class="hero">
         <h2>Bienvenue sur mon Portail Académique</h2>
-        <p>Espace d'apprentissage, de recherche biomédicale et de partage scientifique dédié aux étudiants universitaires et de l'ISPITS d'Agadir, ainsi qu'à la communauté scientifique.</p>
+        <p>Espace d'apprentissage, de recherche biomédicale et de partage scientifique dédié aux étudiants de l'ISPITS d'Agadir et à la communauté universitaire.</p>
     </section>
 
     <div class="main-layout">
-        
-        <!-- SECTION BIENVENUE -->
         <div class="welcome-section">
             <h3>Mot de bienvenue</h3>
-            <p>Ce portail a été conçu pour structurer et mettre à la disposition de mes étudiants, chercheurs et collègues, l'ensemble des ressources pédagogiques et scientifiques liées à mes enseignements et axes de recherche.</p>
+            <p>Ce portail a été conçu pour structurer et mettre à la disposition de mes étudiants, chercheurs et collègues l'ensemble des ressources pédagogiques et scientifiques liées à mes enseignements et axes de recherche.</p>
             <p>En tant qu'enseignante-chercheuse, j'ai à cœur d'allier la rigueur méthodologique des sciences épidémiologiques aux avancées technologiques de la génétique moléculaire et humaine. Vous trouverez ici les syllabus de cours, les supports didactiques téléchargeables ainsi que l'ensemble de ma production scientifique indexée.</p>
-            <p>N'hésitez pas à consulter les différentes sections pour enrichir vos travaux ou à me contacter directement via les canaux officiels listés ci-contre.</p>
+            <p>N'hésitez pas à consulter les différentes sections pour enrichir vos travaux ou à me contacter directement via les canaux officiels listés dans l'onglet Contact.</p>
         </div>
 
-        <!-- FICHE D'INFORMATIONS RECTIFIÉE -->
         <div class="info-sidebar">
-            <h4>Fiche d'Informations &amp; Coordonnées</h4>
-            
+            <h4>Fiche d'Informations</h4>
             <div class="info-block">
                 <label>Responsabilités Actuelles</label>
                 <p class="coordinatrice-title">COORDONNATRICE PÉDAGOGIQUE DU MASTER SPÉCIALISÉ : LEADERSHIP &amp; MANAGEMENT EN SANTÉ SEXUELLE ET REPRODUCTIVE (LM-SSR)</p>
             </div>
-
             <div class="info-block">
                 <label>Responsabilités Passées</label>
                 <p class="coordinatrice-title" style="color: #566573;">COORDONNATRICE PÉDAGOGIQUE DE LA LICENCE PROFESSIONNELLE : SOINS INFIRMIERS (2019-2022)</p>
             </div>
-
-            <div class="info-block">
-                <label>Affiliation Institutionnelle</label>
-                <p>ISPITS d’Agadir, Centre Hospitalier Régional Hassan II, Ministère de la Santé et de la Protection Sociale, Maroc.</p>
-            </div>
-
-            <div class="info-block">
-                <label>Courriels Officiels</label>
-                <a href="mailto:a.korrida@uiz.ac.ma" class="email-link">a.korrida@uiz.ac.ma</a>
-                <a href="mailto:amalkorrida11@aol.com" class="email-link">amalkorrida11@aol.com</a>
-            </div>
         </div>
-
     </div>
 
     <footer>
