@@ -43,6 +43,7 @@ html<!DOCTYPE html>
         .resource-badge { display: inline-block; align-self: flex-start; background-color: #34495e; color: var(--white); font-size: 0.75rem; font-weight: bold; padding: 0.2rem 0.6rem; border-radius: 4px; text-transform: uppercase; }
         .badge-tool { background-color: var(--accent-color); }
         .badge-link { background-color: #27ae60; }
+        .badge-master { background-color: #8e44ad; }
 
         .btn-action { background-color: #2e86c1; color: #ffffff !important; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.88rem; font-weight: bold; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: background-color 0.2s; }
         .btn-action:hover { background-color: var(--primary-dark); }
@@ -79,6 +80,16 @@ html<!DOCTYPE html>
         <h2 class="section-title">📂 Guides, Outils Scientifiques &amp; Utilitaires</h2>
         <div class="resource-grid">
             
+            <!-- NOUVELLE RESSOURCE : GUIDE MFE MASTER -->
+            <div class="resource-card" style="border-top-color: #8e44ad;">
+                <div>
+                    <span class="resource-badge badge-master">Master Spécialisé</span>
+                    <h3 style="margin-top: 0.5rem;">Guide de Rédaction des MFE (Master LM-SSR et PAOSP)</h3>
+                    <p style="margin-top: 0.3rem;">Directives méthodologiques, exigences académiques spécifiques et protocoles de recherche avancés requis pour les Mémoires de Fin d'Études des cycles Master LM-SSR et PAOSP.</p>
+                </div>
+                <a href="guide-mfe-master.pdf" target="_blank" class="btn-action">💾 Télécharger le Guide MFE (PDF)</a>
+            </div>
+
             <!-- RESSOURCE 1 -->
             <div class="resource-card">
                 <div>
@@ -114,7 +125,27 @@ html<!DOCTYPE html>
         <h2 class="section-title">🔗 Bibliothèques Numériques &amp; Portails Académiques</h2>
         <div class="resource-grid">
             
-            <!-- LIEN 1 -->
+            <!-- NCBI -->
+            <div class="resource-card" style="border-top-color: #27ae60;">
+                <div>
+                    <span class="resource-badge badge-link">Banque de gènes / Bio-info</span>
+                    <h3 style="margin-top: 0.5rem;">NCBI (National Center for Biotechnology Information)</h3>
+                    <p style="margin-top: 0.3rem;">Accès direct aux banques de données fondamentales (GenBank, BLAST, OMIM) pour l'analyse des séquences nucléotidiques et les recherches en épigénétique.</p>
+                </div>
+                <a href="https://nih.gov" target="_blank" class="btn-action">🌐 Consulter le NCBI</a>
+            </div>
+
+            <!-- EMBL -->
+            <div class="resource-card" style="border-top-color: #27ae60;">
+                <div>
+                    <span class="resource-badge badge-link">Génomique / Phylogénie</span>
+                    <h3 style="margin-top: 0.5rem;">EMBL-EBI (European Bioinformatics Institute)</h3>
+                    <p style="margin-top: 0.3rem;">Portail européen de bio-informatique fournissant les outils de référence pour l'alignement de séquences, l'analyse génomique et l'étude phylogénétique moléculaire.</p>
+                </div>
+                <a href="https://ebi.ac.uk" target="_blank" class="btn-action">🌐 Visiter l'EMBL-EBI</a>
+            </div>
+
+            <!-- LIEN 1 (IMIST) -->
             <div class="resource-card" style="border-top-color: #27ae60;">
                 <div>
                     <span class="resource-badge badge-link">Base de données</span>
@@ -124,33 +155,5 @@ html<!DOCTYPE html>
                 <a href="https://imist.ma" target="_blank" class="btn-action">🌐 Visiter le Portail IMIST</a>
             </div>
 
-            <!-- LIEN 2 -->
+            <!-- LIEN 2 (PUBMED) -->
             <div class="resource-card" style="border-top-color: #27ae60;">
-                <div>
-                    <span class="resource-badge badge-link">Moteur de recherche</span>
-                    <h3 style="margin-top: 0.5rem;">PubMed Central (PMC)</h3>
-                    <p style="margin-top: 0.3rem;">Moteur de recherche de référence mondiale regroupant des millions de fiches et d'articles en accès libre dans les domaines biomédicaux et des sciences de la santé.</p>
-                </div>
-                <a href="https://nih.gov" target="_blank" class="btn-action">🌐 Interroger PubMed</a>
-            </div>
-
-            <!-- LIEN 3 -->
-            <div class="resource-card" style="border-top-color: #27ae60;">
-                <div>
-                    <span class="resource-badge badge-link">Éditeur Scientifique</span>
-                    <h3 style="margin-top: 0.5rem;">ScienceDirect / Scopus</h3>
-                    <p style="margin-top: 0.3rem;">Plateforme d'accès aux revues internationales à haut facteur d'impact pour approfondir vos revues de littérature en génétique et épidémiologie.</p>
-                </div>
-                <a href="https://sciencedirect.com" target="_blank" class="btn-action">🌐 Explorer ScienceDirect</a>
-            </div>
-
-        </div>
-
-    </div>
-
-    <footer>
-        <p>&copy; 2026 - Portail Universitaire Éducatif Pr. Amal KORRIDA. Tous droits réservés.</p>
-    </footer>
-
-</body>
-</html>
