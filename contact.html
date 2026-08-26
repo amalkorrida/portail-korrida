@@ -3,60 +3,144 @@ html<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Secrétariat | Pr. Amal KORRIDA</title>
+    <title>Contact & Localisation | Pr. Amal KORRIDA</title>
     <style>
-        :root { --primary-color: #1a5276; --primary-dark: #11364f; --secondary-color: #2e86c1; --accent-color: #e67e22; --text-dark: #2c3e50; --bg-light: #f4f6f7; --white: #ffffff; --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        :root {
+            --primary-color: #1a5276;
+            --primary-dark: #11364f;
+            --secondary-color: #2e86c1;
+            --accent-color: #e67e22;
+            --text-dark: #2c3e50;
+            --bg-light: #f4f6f7;
+            --white: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            /* Couleurs Réseaux Sociaux Académiques */
+            --linkedin-color: #0077b5;
+            --researchgate-color: #00ccbb;
+            --scholar-color: #4285f4;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
-        header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; }
+        a { text-decoration: none; }
+        
+        /* HEADER & NAVIGATION */
+        header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
+        .logo h1 { font-size: 1.5rem; font-weight: 700; }
+        .logo p { font-size: 0.8rem; color: #d6e4ed; margin: 0; }
         .nav-menu { display: flex; gap: 1.5rem; }
-        .nav-menu a { color: var(--white); font-size: 0.95rem; padding: 0.5rem 0.2rem; text-decoration: none; }
-        .nav-menu a.active { border-bottom: 2px solid var(--white); }
+        .nav-menu a { color: var(--white); font-size: 0.95rem; padding: 0.5rem 0.2rem; transition: all 0.2s; }
+        .nav-menu a.active { border-bottom: 2px solid var(--white); font-weight: 600; }
+
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; }
-        .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.5rem; }
-        .contact-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem; }
-        .contact-form { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 1.2rem; }
-        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.9rem; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; }
-        .btn-submit { background-color: var(--primary-color); color: var(--white); border: none; padding: 0.8rem 1.5rem; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%; }
-        .side-info { display: flex; flex-direction: column; gap: 2rem; }
-        .card-info { border: 1px solid #ddd; padding: 1.5rem; border-radius: 6px; }
-        .map-box { background-color: #ddd; border-radius: 6px; height: 250px; overflow: hidden; border: 1px solid #ccc; margin-top: 1rem; }
-        footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 4rem; }
-        @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } .contact-grid { grid-template-columns: 1fr; } }
+        .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.4rem; }
+        
+        /* COORDONNÉES ET CARTE EN DEUX COLONNES */
+        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; }
+        
+        /* ZONE COORDONNÉES */
+        .contact-info-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; border-top: 5px solid var(--primary-color); box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; }
+        .info-item label { display: block; font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; margin-bottom: 0.3rem; }
+        .info-item p { font-size: 1.05rem; font-weight: 500; }
+        .email-link { color: var(--secondary-color); font-weight: 600; display: block; margin-top: 0.2rem; font-size: 1.05rem; }
+        .email-link:hover { text-decoration: underline; }
+
+        /* BOUTONS RÉSEAUX SOCIAUX ACADÉMIQUES */
+        .social-grid { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.5rem; }
+        .social-btn { color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 5px; font-weight: bold; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 10px; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .social-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+        .btn-linkedin { background-color: var(--linkedin-color); }
+        .btn-researchgate { background-color: var(--researchgate-color); }
+        .btn-scholar { background-color: var(--scholar-color); }
+
+        /* ZONE CARTE GOOGLE MAPS */
+        .map-box { border-radius: 8px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.08); border: 1px solid #ddd; background-color: var(--bg-light); position: relative; height: 100%; min-height: 450px; }
+        .map-box iframe { width: 100%; height: 100%; min-height: 450px; border: none; display: block; }
+
+        footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 5rem; }
+        
+        @media (max-width: 950px) { 
+            .nav-container { flex-direction: column; gap: 1rem; } 
+            .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
+            .map-box { min-height: 350px; }
+            .map-box iframe { min-height: 350px; }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <div class="nav-container">
             <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-                <div><h1 style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 0;">Pr. Amal KORRIDA</h1><p style="font-size: 0.8rem; color: #d6e4ed; margin: 0;">Épidémiologie & Génétique Humaine | ISPITS Agadir</p></div>
-                <img src="logo-personnel.png" alt="Logo" style="height: 55px; width: auto; background-color: var(--white); padding: 4px; border-radius: 6px;">
+                <div>
+                    <h1 style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 0;">Pr. Amal KORRIDA</h1>
+                    <p style="font-size: 0.8rem; color: #d6e4ed; margin: 0;">Épidémiologie & Génétique Humaine | ISPITS Agadir</p>
+                </div>
+                <img src="logo-personnel.png" alt="Logo Personnel" style="height: 55px; width: auto; background-color: var(--white); padding: 4px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">
             </div>
             <nav class="nav-menu">
-                <a href="index.html">Accueil</a><a href="enseignement.html">Enseignement</a><a href="recherche.html">Recherche</a><a href="publications.html">Publications</a><a href="ressources.html">Ressources</a><a href="institutionnel.html">Cadre & Associations</a><a href="contact.html" class="active">Contact</a>
+                <a href="index.html">Accueil</a>
+                <a href="enseignement.html">Enseignement</a>
+                <a href="recherche.html">Recherche</a>
+                <a href="publications.html">Publications</a>
+                <a href="ressources.html">Ressources</a>
+                <a href="institutionnel.html">Cadre &amp; Associations</a>
+                <a href="contact.html" class="active">Contact</a>
             </nav>
         </div>
     </header>
+
     <div class="container">
-        <h2 class="section-title">📬 Contact & Secrétariat</h2>
-        <div class="contact-grid">
-            <div>
-                <form class="contact-form" action="https://formspree.io" method="POST">
-                    <div class="form-group"><label>Nom & Prénom *</label><input type="text" name="name" required></div>
-                    <div class="form-group"><label>Adresse électronique *</label><input type="email" name="_replyto" required></div>
-                    <div class="form-group"><label>Message *</label><textarea name="message" rows="6" required></textarea></div>
-                    <button type="submit" class="btn-submit">🔒 Envoyer la demande</button>
-                </form>
+        
+        <h2 class="section-title">📬 Fiche de Contact &amp; Coordonnées Officielles</h2>
+
+        <div class="contact-layout">
+            
+            <!-- COLONNE GAUCHE : COORDONNÉES & RÉSEAUX -->
+            <div class="contact-info-box">
+                
+                <div class="info-item">
+                    <label>Affiliation &amp; Localisation Administrative</label>
+                    <p>ISPITS d’Agadir, Centre Hospitalier Régional Hassan II, Maroc.</p>
+                </div>
+
+                <div class="info-item">
+                    <label>Adresses Électroniques (Courriels)</label>
+                    <a href="mailto:a.korrida@uiz.ac.ma" class="email-link">✉️ a.korrida@uiz.ac.ma</a>
+                    <a href="mailto:amalkorrida11@aol.com" class="email-link">✉️ amalkorrida11@aol.com</a>
+                </div>
+
+                <div class="info-item">
+                    <label>Réseaux Sociaux Scientifiques &amp; Académiques</label>
+                    <div class="social-grid">
+                        <!-- Remplacer les '#' par vos liens réels lorsque vous les aurez -->
+                        <a href="#" target="_blank" class="social-btn btn-researchgate">📊 Consulter mon profil ResearchGate</a>
+                        <a href="#" target="_blank" class="social-btn btn-linkedin">💼 Me rejoindre sur LinkedIn</a>
+                        <a href="#" target="_blank" class="social-btn btn-scholar">🎓 Profil Google Scholar / Citations</a>
+                    </div>
+                </div>
+
             </div>
-            <div class="side-info">
-                <div class="card-info"><h3>🏛️ ISPITS d’Agadir</h3><p>CHR Hassan II, Souss-Massa, Maroc.</p></div>
-                <div class="map-box"><iframe src="https://google.com" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+
+            <!-- COLONNE DROITE : INTEGRATION CARTE GOOGLE MAPS (ISPITS AGADIR DANS LE CHR HASSAN II) -->
+            <div class="map-box">
+                <iframe 
+                    src="https://google.com" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
+
         </div>
+
     </div>
-    <footer><p>&copy; 2026 - Portail Universitaire Pr. Amal KORRIDA.</p></footer>
+
+    <footer>
+        <p>&copy; 2026 - Portail Éducatif du Pr. Amal KORRIDA. Tous droits réservés.</p>
+    </footer>
+
 </body>
 </html>
