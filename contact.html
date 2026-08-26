@@ -43,7 +43,7 @@ html<!DOCTYPE html>
         /* ZONE COORDONNÉES */
         .contact-info-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; border-top: 5px solid var(--primary-color); box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; }
         .info-item label { display: block; font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; margin-bottom: 0.3rem; }
-        .info-item p { font-size: 1.05rem; font-weight: 500; }
+        .info-item p { font-size: 1.05rem; font-weight: 500; text-align: justify; }
         .email-link { color: var(--secondary-color); font-weight: 600; display: block; margin-top: 0.2rem; font-size: 1.05rem; }
         .email-link:hover { text-decoration: underline; }
 
@@ -55,9 +55,9 @@ html<!DOCTYPE html>
         .btn-researchgate { background-color: var(--researchgate-color); }
         .btn-scholar { background-color: var(--scholar-color); }
 
-        /* ZONE CARTE GOOGLE MAPS */
-        .map-box { border-radius: 8px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.08); border: 1px solid #ddd; background-color: var(--bg-light); position: relative; height: 100%; min-height: 450px; }
-        .map-box iframe { width: 100%; height: 100%; min-height: 450px; border: none; display: block; }
+        /* ZONE CARTE GOOGLE MAPS ACTIVE / SÉCURISÉE */
+        .map-box { border-radius: 8px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.08); border: 1px solid #ddd; background-color: #e5e8e8; position: relative; height: 100%; min-height: 450px; }
+        .map-box iframe { width: 100%; height: 100%; min-height: 450px; border: none; display: block; background: #e5e8e8; }
 
         footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 5rem; }
         
@@ -98,12 +98,12 @@ html<!DOCTYPE html>
 
         <div class="contact-layout">
             
-            <!-- COLONNE GAUCHE : COORDONNÉES & RÉSEAUX -->
+            <!-- COLONNE GAUCHE : COORDONNÉES OFFICIELLES & RÉSEAUX -->
             <div class="contact-info-box">
                 
                 <div class="info-item">
-                    <label>Affiliation &amp; Localisation Administrative</label>
-                    <p>ISPITS d’Agadir, Centre Hospitalier Régional Hassan II, Maroc.</p>
+                    <label>Affiliation Institutionnelle</label>
+                    <p>ISPITS d’Agadir, Centre Hospitalier Régional Hassan II, Ministère de la Santé et de la Protection Sociale, Maroc.</p>
                 </div>
 
                 <div class="info-item">
@@ -115,7 +115,6 @@ html<!DOCTYPE html>
                 <div class="info-item">
                     <label>Réseaux Sociaux Scientifiques &amp; Académiques</label>
                     <div class="social-grid">
-                        <!-- Remplacer les '#' par vos liens réels lorsque vous les aurez -->
                         <a href="#" target="_blank" class="social-btn btn-researchgate">📊 Consulter mon profil ResearchGate</a>
                         <a href="#" target="_blank" class="social-btn btn-linkedin">💼 Me rejoindre sur LinkedIn</a>
                         <a href="#" target="_blank" class="social-btn btn-scholar">🎓 Profil Google Scholar / Citations</a>
@@ -124,12 +123,12 @@ html<!DOCTYPE html>
 
             </div>
 
-            <!-- COLONNE DROITE : INTEGRATION CARTE GOOGLE MAPS (ISPITS AGADIR DANS LE CHR HASSAN II) -->
+            <!-- COLONNE DROITE : MOTEUR DE RECHERCHE D'ADRESSE STABLE ET DYNAMIQUE GOOGLE MAPS -->
             <div class="map-box">
                 <iframe 
                     src="https://google.com" 
                     allowfullscreen="" 
-                    loading="lazy" 
+                    loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
@@ -139,7 +138,7 @@ html<!DOCTYPE html>
     </div>
 
     <footer>
-        <p>&copy; 2026 - Portail Éducatif du Pr. Amal KORRIDA. Tous droits réservés.</p>
+        <p>&copy; 2026 - Portail Universitaire Éducatif Pr. Amal KORRIDA. Tous droits réservés.</p>
     </footer>
 
 </body>
