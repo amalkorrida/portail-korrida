@@ -3,52 +3,154 @@ html<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Ressources & Médiathèque | Pr. Amal KORRIDA</title>
+    <title>Ressources & Outils | Pr. Amal KORRIDA</title>
     <style>
-        :root { --primary-color: #1a5276; --primary-dark: #11364f; --secondary-color: #2e86c1; --accent-color: #e67e22; --text-dark: #2c3e50; --bg-light: #f4f6f7; --white: #ffffff; --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        :root {
+            --primary-color: #1a5276;
+            --primary-dark: #11364f;
+            --secondary-color: #2e86c1;
+            --accent-color: #e67e22;
+            --text-dark: #2c3e50;
+            --bg-light: #f4f6f7;
+            --white: #ffffff;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
-        header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; }
+        a { text-decoration: none; }
+        
+        /* HEADER & NAVIGATION */
+        header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
+        .logo h1 { font-size: 1.5rem; font-weight: 700; }
+        .logo p { font-size: 0.8rem; color: #d6e4ed; margin: 0; }
         .nav-menu { display: flex; gap: 1.5rem; }
-        .nav-menu a { color: var(--white); font-size: 0.95rem; padding: 0.5rem 0.2rem; text-decoration: none; }
-        .nav-menu a.active { border-bottom: 2px solid var(--white); }
+        .nav-menu a { color: var(--white); font-size: 0.95rem; padding: 0.5rem 0.2rem; transition: all 0.2s; }
+        .nav-menu a.active { border-bottom: 2px solid var(--white); font-weight: 600; }
+
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; }
-        .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; }
-        .tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
-        .tool-box { border: 1px solid #ddd; padding: 1.5rem; border-radius: 8px; background-color: var(--bg-light); }
-        .media-section { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-        .media-card { background-color: var(--white); border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; }
-        .embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; background: #000; border-radius: 6px; }
-        .embed-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 4rem; }
-        @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } .tools-grid, .media-section { grid-template-columns: 1fr; } }
+        .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.4rem; }
+        
+        /* GRILLE DES RESSOURCES */
+        .resource-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .resource-card { background-color: var(--bg-light); padding: 1.8rem; border-radius: 8px; border-top: 4px solid var(--primary-color); box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; gap: 1.2rem; transition: transform 0.2s; }
+        .resource-card:hover { transform: translateY(-3px); }
+        
+        .resource-card h3 { font-size: 1.15rem; color: var(--primary-dark); font-weight: 600; }
+        .resource-card p { font-size: 0.95rem; color: #566573; text-align: justify; }
+        
+        .resource-badge { display: inline-block; align-self: flex-start; background-color: #34495e; color: var(--white); font-size: 0.75rem; font-weight: bold; padding: 0.2rem 0.6rem; border-radius: 4px; text-transform: uppercase; }
+        .badge-tool { background-color: var(--accent-color); }
+        .badge-link { background-color: #27ae60; }
+
+        .btn-action { background-color: #2e86c1; color: #ffffff !important; padding: 0.5rem 1rem; border-radius: 4px; font-size: 0.88rem; font-weight: bold; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: background-color 0.2s; }
+        .btn-action:hover { background-color: var(--primary-dark); }
+        
+        footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 5rem; }
+        @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } .resource-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+
     <header>
         <div class="nav-container">
             <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-                <div><h1 style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 0;">Pr. Amal KORRIDA</h1><p style="font-size: 0.8rem; color: #d6e4ed; margin: 0;">Épidémiologie & Génétique Humaine | ISPITS Agadir</p></div>
-                <img src="logo-personnel.png" alt="Logo" style="height: 55px; width: auto; background-color: var(--white); padding: 4px; border-radius: 6px;">
+                <div>
+                    <h1 style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 0;">Pr. Amal KORRIDA</h1>
+                    <p style="font-size: 0.8rem; color: #d6e4ed; margin: 0;">Épidémiologie & Génétique Humaine | ISPITS Agadir</p>
+                </div>
+                <img src="logo-personnel.png" alt="Logo Personnel" style="height: 55px; width: auto; background-color: var(--white); padding: 4px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">
             </div>
             <nav class="nav-menu">
-                <a href="index.html">Accueil</a><a href="enseignement.html">Enseignement</a><a href="recherche.html">Recherche</a><a href="publications.html">Publications</a><a href="ressources.html" class="active">Ressources</a><a href="institutionnel.html">Cadre & Associations</a><a href="contact.html">Contact</a>
+                <a href="index.html">Accueil</a>
+                <a href="enseignement.html">Enseignement</a>
+                <a href="recherche.html">Recherche</a>
+                <a href="publications.html">Publications</a>
+                <a href="ressources.html" class="active">Ressources</a>
+                <a href="institutionnel.html">Cadre &amp; Associations</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
+
     <div class="container">
-        <h2 class="section-title">🛠️ Boîte à outils Bio-informatique & Biostatistiques</h2>
-        <div class="tools-grid">
-            <div class="tool-box"><h3>📊 Analyse Épidémiologique</h3><p>Tutoriels d'utilisation pour <strong>Epi Info</strong> (Dashboard), SPSS et JASP.</p></div>
-            <div class="tool-box"><h3>🧬 Génétique des Populations</h3><p>Protocoles d'alignement de séquences avec MEGA, ClustalX et Arlequin.</p></div>
+        
+        <h2 class="section-title">📂 Guides, Outils Scientifiques &amp; Utilitaires</h2>
+        <div class="resource-grid">
+            
+            <!-- RESSOURCE 1 -->
+            <div class="resource-card">
+                <div>
+                    <span class="resource-badge">Document</span>
+                    <h3 style="margin-top: 0.5rem;">Guide de Rédaction des Mémoires</h3>
+                    <p style="margin-top: 0.3rem;">Protocole méthodologique officiel, normes de mise en page et règles de citation APA indispensables pour les mémoires de fin d'études en Licence et Master Santé.</p>
+                </div>
+                <a href="guide-redaction-memoire.pdf" target="_blank" class="btn-action">💾 Télécharger le Guide (PDF)</a>
+            </div>
+
+            <!-- RESSOURCE 2 -->
+            <div class="resource-card" style="border-top-color: var(--accent-color);">
+                <div>
+                    <span class="resource-badge badge-tool">Logiciel / Outil</span>
+                    <h3 style="margin-top: 0.5rem;">Logiciel OMS AirQ+</h3>
+                    <p style="margin-top: 0.3rem;">Lien d'orientation vers l'outil officiel de l'Organisation Mondiale de la Santé (OMS) dédié à la modélisation et à l'évaluation de l'impact de la pollution de l'air sur la santé.</p>
+                </div>
+                <a href="https://who.int" target="_blank" class="btn-action">🌐 Accéder à l'Outil OMS</a>
+            </div>
+
+            <!-- RESSOURCE 3 -->
+            <div class="resource-card">
+                <div>
+                    <span class="resource-badge">Modèle</span>
+                    <h3 style="margin-top: 0.5rem;">Canevas de Protocole de Recherche</h3>
+                    <p style="margin-top: 0.3rem;">Structure type et sections requises pour formuler un protocole de recherche épidémiologique ou clinique valide avant soumission au comité d'éthique.</p>
+                </div>
+                <a href="canevas-protocole-recherche.docx" target="_blank" class="btn-action">💾 Télécharger le Canevas (.docx)</a>
+            </div>
+
         </div>
-        <h2 class="section-title">📺 Médiathèque Pédagogique (Lecture seule en ligne)</h2>
-        <div class="media-section">
-            <div class="media-card"><h3>🎥 Capsule Vidéo Didactique</h3><p>Processus de recherche clinique.</p><div class="embed-container"><iframe src="https://youtube.com" allowfullscreen></iframe></div></div>
-            <div class="media-card"><h3>📊 Supports de Cours Interactifs (Slides)</h3><p>Homéostasie et équilibres hydro-électrolytiques.</p><div class="embed-container"><iframe src="https://live.com" frameborder="0"></iframe></div></div>
+
+        <h2 class="section-title">🔗 Bibliothèques Numériques &amp; Portails Académiques</h2>
+        <div class="resource-grid">
+            
+            <!-- LIEN 1 -->
+            <div class="resource-card" style="border-top-color: #27ae60;">
+                <div>
+                    <span class="resource-badge badge-link">Base de données</span>
+                    <h3 style="margin-top: 0.5rem;">Portail IMIST (CNRST)</h3>
+                    <p style="margin-top: 0.3rem;">Accès à l'Institut Marocain de l'Information Scientifique et Technique pour la consultation des thèses, revues nationales et bases de données indexées.</p>
+                </div>
+                <a href="https://imist.ma" target="_blank" class="btn-action">🌐 Visiter le Portail IMIST</a>
+            </div>
+
+            <!-- LIEN 2 -->
+            <div class="resource-card" style="border-top-color: #27ae60;">
+                <div>
+                    <span class="resource-badge badge-link">Moteur de recherche</span>
+                    <h3 style="margin-top: 0.5rem;">PubMed Central (PMC)</h3>
+                    <p style="margin-top: 0.3rem;">Moteur de recherche de référence mondiale regroupant des millions de fiches et d'articles en accès libre dans les domaines biomédicaux et des sciences de la santé.</p>
+                </div>
+                <a href="https://nih.gov" target="_blank" class="btn-action">🌐 Interroger PubMed</a>
+            </div>
+
+            <!-- LIEN 3 -->
+            <div class="resource-card" style="border-top-color: #27ae60;">
+                <div>
+                    <span class="resource-badge badge-link">Éditeur Scientifique</span>
+                    <h3 style="margin-top: 0.5rem;">ScienceDirect / Scopus</h3>
+                    <p style="margin-top: 0.3rem;">Plateforme d'accès aux revues internationales à haut facteur d'impact pour approfondir vos revues de littérature en génétique et épidémiologie.</p>
+                </div>
+                <a href="https://sciencedirect.com" target="_blank" class="btn-action">🌐 Explorer ScienceDirect</a>
+            </div>
+
         </div>
+
     </div>
-    <footer><p>&copy; 2026 - Portail Universitaire Pr. Amal KORRIDA.</p></footer>
+
+    <footer>
+        <p>&copy; 2026 - Portail Universitaire Éducatif Pr. Amal KORRIDA. Tous droits réservés.</p>
+    </footer>
+
 </body>
 </html>
