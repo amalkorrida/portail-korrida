@@ -15,7 +15,6 @@ html<!DOCTYPE html>
             --white: #ffffff;
             --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             
-            /* Couleurs Réseaux Sociaux Académiques */
             --linkedin-color: #0077b5;
             --researchgate-color: #00ccbb;
             --scholar-color: #4285f4;
@@ -25,7 +24,6 @@ html<!DOCTYPE html>
         body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
         a { text-decoration: none; }
         
-        /* HEADER & NAVIGATION */
         header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
         .logo h1 { font-size: 1.5rem; font-weight: 700; }
@@ -37,17 +35,14 @@ html<!DOCTYPE html>
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; }
         .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.4rem; }
         
-        /* COORDONNÉES ET CARTE EN DEUX COLONNES */
         .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; }
         
-        /* ZONE COORDONNÉES */
         .contact-info-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; border-top: 5px solid var(--primary-color); box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; }
         .info-item label { display: block; font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; margin-bottom: 0.3rem; }
         .info-item p { font-size: 1.05rem; font-weight: 500; text-align: justify; }
         .email-link { color: var(--secondary-color); font-weight: 600; display: block; margin-top: 0.2rem; font-size: 1.05rem; }
         .email-link:hover { text-decoration: underline; }
 
-        /* BOUTONS RÉSEAUX SOCIAUX ACADÉMIQUES */
         .social-grid { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.5rem; }
         .social-btn { color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 5px; font-weight: bold; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 10px; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .social-btn:hover { opacity: 0.9; transform: translateY(-1px); }
@@ -55,7 +50,6 @@ html<!DOCTYPE html>
         .btn-researchgate { background-color: var(--researchgate-color); }
         .btn-scholar { background-color: var(--scholar-color); }
 
-        /* ZONE CARTE GOOGLE MAPS ACTIVE / SÉCURISÉE */
         .map-box { border-radius: 8px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.08); border: 1px solid #ddd; background-color: #e5e8e8; position: relative; height: 100%; min-height: 450px; }
         .map-box iframe { width: 100%; height: 100%; min-height: 450px; border: none; display: block; background: #e5e8e8; }
 
@@ -93,14 +87,10 @@ html<!DOCTYPE html>
     </header>
 
     <div class="container">
-        
         <h2 class="section-title">📬 Fiche de Contact &amp; Coordonnées Officielles</h2>
 
         <div class="contact-layout">
-            
-            <!-- COLONNE GAUCHE : COORDONNÉES OFFICIELLES & RÉSEAUX -->
             <div class="contact-info-box">
-                
                 <div class="info-item">
                     <label>Affiliation Institutionnelle</label>
                     <p>ISPITS d’Agadir, Centre Hospitalier Régional Hassan II, Ministère de la Santé et de la Protection Sociale, Maroc.</p>
@@ -115,15 +105,13 @@ html<!DOCTYPE html>
                 <div class="info-item">
                     <label>Réseaux Sociaux Scientifiques &amp; Académiques</label>
                     <div class="social-grid">
-                        <a href="#" target="_blank" class="social-btn btn-researchgate">📊 Consulter mon profil ResearchGate</a>
-                        <a href="#" target="_blank" class="social-btn btn-linkedin">💼 Me rejoindre sur LinkedIn</a>
-                        <a href="#" target="_blank" class="social-btn btn-scholar">🎓 Profil Google Scholar / Citations</a>
+                        <a href="https://www.researchgate.net/profile/Amal-Korrida?ev=hdr_xprf" target="_blank" class="social-btn btn-researchgate">📊 Consulter mon profil ResearchGate</a>
+                        <a href="https://www.linkedin.com/in/akorrida/" target="_blank" class="social-btn btn-linkedin">💼 Me rejoindre sur LinkedIn</a>
+                        <a href="https://scholar.google.com/citations?user=L8bjMzcAAAAJ&hl=fr" target="_blank" class="social-btn btn-scholar">🎓 Profil Google Scholar / Citations</a>
                     </div>
                 </div>
-
             </div>
 
-            <!-- COLONNE DROITE : MOTEUR DE RECHERCHE D'ADRESSE STABLE ET DYNAMIQUE GOOGLE MAPS -->
             <div class="map-box">
                 <iframe 
                     src="https://google.com" 
@@ -132,13 +120,11 @@ html<!DOCTYPE html>
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-
         </div>
-
     </div>
 
     <footer>
-        <p>&copy; 2026 - Portail Universitaire Éducatif Pr. Amal KORRIDA. Tous droits réservés.</p>
+        <p>&copy; 2026 - Portail Éducatif du Pr. Amal KORRIDA. Tous droits réservés.</p>
     </footer>
 
 </body>
