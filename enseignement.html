@@ -27,8 +27,6 @@ html<!DOCTYPE html>
         .nav-menu a.active { border-bottom: 2px solid var(--white); }
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; }
         .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.4rem; }
-        
-        /* GRILLE DES COURS */
         .course-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
         .course-card { background-color: var(--bg-light); padding: 1.5rem; border-radius: 8px; border-top: 4px solid var(--primary-color); box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; transition: transform 0.2s; }
         .course-card:hover { transform: translateY(-3px); }
@@ -36,7 +34,6 @@ html<!DOCTYPE html>
         .course-badge { display: inline-block; align-self: flex-start; background-color: #34495e; color: var(--white); font-size: 0.75rem; font-weight: bold; padding: 0.2rem 0.6rem; border-radius: 4px; text-transform: uppercase; }
         .btn-download { background-color: #2e86c1; color: #ffffff !important; padding: 0.4rem 0.8rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: background-color 0.2s; }
         .btn-download:hover { background-color: var(--primary-dark); }
-        
         footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 4rem; }
         @media (max-width: 900px) { .nav-container { flex-direction: column; gap: 1rem; } .course-grid { grid-template-columns: 1fr; } }
     </style>
@@ -65,116 +62,60 @@ html<!DOCTYPE html>
     <div class="container">
         <h2 class="section-title">📚 Modules Enseignés (Cours/TD/TP : Niveaux Licence/Master)</h2>
         <div class="course-grid">
-            <!-- Module 1 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Anatomie Physiologie</h3>
-                    <p style="font-size: 0.9rem; color: #566573; margin-top: 0.3rem;">Systèmes : nerveux, endocrinien, tissus, oeil, oreille.</p>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Anatomie Physiologie</h3><p style="font-size:0.9rem; color:#566573; margin-top:0.3rem;">Systèmes : nerveux, endocrinien, tissus, oeil, oreille.</p></div>
                 <a href="cours-anatomie-physiologie.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
             </div>
-            <!-- Module 2 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Immunologie</h3>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Immunologie</h3></div>
                 <a href="cours-immunologie.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
             </div>
-            <!-- Module 3 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Allergies et Intolérances Alimentaires</h3>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Allergies et Intolérances Alimentaires</h3></div>
                 <a href="cours-allergies-intolerances.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
             </div>
-            <!-- Module 4 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Médecine Expérimentale</h3>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Médecine Expérimentale</h3></div>
                 <a href="cours-medecine-experimentale.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
             </div>
-            <!-- Module 5 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours &amp; TP</span>
-                    <h3 style="margin-top: 0.5rem;">Bio-Informatique</h3>
-                </div>
+                <div><span class="course-badge">Cours &amp; TP</span><h3 style="margin-top:0.5rem;">Bio-Informatique</h3></div>
                 <a href="cours-tp-bioinformatique.pdf" target="_blank" class="btn-download">💾 Support de Cours &amp; TP (PDF)</a>
             </div>
-            <!-- Module 6 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Génétique / Épigénétique</h3>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Génétique / Épigénétique</h3></div>
                 <a href="cours-genetique-epigenetique.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
             </div>
-            <!-- Module 7 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Biologie Moléculaire</h3>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Biologie Moléculaire</h3></div>
                 <a href="cours-biologie-moleculaire.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
-            </div>html            <!-- Module 8 -->
+            </div>
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Régimes Alimentaires</h3>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Régimes Alimentaires</h3></div>
                 <a href="cours-regimes-alimentaires.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
             </div>
-            <!-- Module 9 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Biologie Cellulaire</h3>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Biologie Cellulaire</h3></div>
                 <a href="cours-biologie-cellulaire.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
             </div>
-            <!-- Module 10 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Microbiologie / Parasitologie / Virologie</h3>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Microbiologie / Parasitologie / Virologie</h3></div>
                 <a href="cours-microbiologie-parasitologie.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
             </div>
-            <!-- Module 11 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Méthodologie de Recherche</h3>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Méthodologie de Recherche</h3></div>
                 <a href="cours-methodologie-recherche.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
             </div>
-            <!-- Module 12 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours</span>
-                    <h3 style="margin-top: 0.5rem;">Phylogénie Moléculaire</h3>
-                </div>
+                <div><span class="course-badge">Cours</span><h3 style="margin-top:0.5rem;">Phylogénie Moléculaire</h3></div>
                 <a href="cours-phylogenie-moleculaire.pdf" target="_blank" class="btn-download">💾 Support de Cours (PDF)</a>
             </div>
-            <!-- Module 13 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">TD</span>
-                    <h3 style="margin-top: 0.5rem;">Épidémiologie</h3>
-                </div>
+                <div><span class="course-badge">TD</span><h3 style="margin-top:0.5rem;">Épidémiologie</h3></div>
                 <a href="td-epidemiologie.pdf" target="_blank" class="btn-download">💾 Support de TD (PDF)</a>
             </div>
-            <!-- Module 14 -->
             <div class="course-card">
-                <div>
-                    <span class="course-badge">Cours &amp; TD</span>
-                    <h3 style="margin-top: 0.5rem;">Nutrition</h3>
-                </div>
+                <div><span class="course-badge">Cours &amp; TD</span><h3 style="margin-top:0.5rem;">Nutrition</h3></div>
                 <a href="cours-td-nutrition.pdf" target="_blank" class="btn-download">💾 Support de Cours &amp; TD (PDF)</a>
             </div>
         </div>
