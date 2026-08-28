@@ -1,127 +1,79 @@
-html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact & Localisation | Pr. Amal KORRIDA</title>
     <style>
-        :root {
-            --primary-color: #1a5276;
-            --primary-dark: #11364f;
-            --secondary-color: #2e86c1;
-            --accent-color: #e67e22;
-            --text-dark: #2c3e50;
-            --bg-light: #f4f6f7;
-            --white: #ffffff;
-            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            
-            --linkedin-color: #0077b5;
-            --researchgate-color: #00ccbb;
-            --scholar-color: #4285f4;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
-        a { text-decoration: none; }
-        
-        header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; }
-        .logo h1 { font-size: 1.5rem; font-weight: 700; }
-        .logo p { font-size: 0.8rem; color: #d6e4ed; margin: 0; }
-        .nav-menu { display: flex; gap: 1.5rem; }
-        .nav-menu a { color: var(--white); font-size: 0.95rem; padding: 0.5rem 0.2rem; transition: all 0.2s; }
-        .nav-menu a.active { border-bottom: 2px solid var(--white); font-weight: 600; }
-
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; }
-        .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.4rem; }
-        
-        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; }
-        
-        .contact-info-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; border-top: 5px solid var(--primary-color); box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; }
-        .info-item label { display: block; font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; margin-bottom: 0.3rem; }
-        .info-item p { font-size: 1.05rem; font-weight: 500; text-align: justify; }
-        .email-link { color: var(--secondary-color); font-weight: 600; display: block; margin-top: 0.2rem; font-size: 1.05rem; }
-        .email-link:hover { text-decoration: underline; }
-
-        .social-grid { display: flex; flex-direction: column; gap: 0.8rem; margin-top: 0.5rem; }
-        .social-btn { color: var(--white) !important; padding: 0.6rem 1.2rem; border-radius: 5px; font-weight: bold; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 10px; transition: opacity 0.2s, transform 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .social-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-        .btn-linkedin { background-color: var(--linkedin-color); }
-        .btn-researchgate { background-color: var(--researchgate-color); }
-        .btn-scholar { background-color: var(--scholar-color); }
-
-        .map-box { border-radius: 8px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.08); border: 1px solid #ddd; background-color: #e5e8e8; position: relative; height: 100%; min-height: 450px; }
-        .map-box iframe { width: 100%; height: 100%; min-height: 450px; border: none; display: block; background: #e5e8e8; }
-
-        footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 5rem; }
-        
-        @media (max-width: 950px) { 
-            .nav-container { flex-direction: column; gap: 1rem; } 
-            .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
-            .map-box { min-height: 350px; }
-            .map-box iframe { min-height: 350px; }
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: 0 auto; padding: 20px; }
+        header { text-align: center; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+        nav { display: flex; justify-content: center; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
+        nav a { text-decoration: none; color: #0066cc; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .container { background: #f9f9f9; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { margin-bottom: 5px; color: #2c3e50; }
+        .subtitle { font-style: italic; color: #7f8c8d; margin-top: 0; }
+        h2 { color: #2980b9; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .section { margin-bottom: 25px; }
+        .links-list { list-style: none; padding: 0; }
+        .links-list li { margin: 12px 0; display: flex; align-items: center; gap: 10px; }
+        .links-list a { text-decoration: none; color: #333; font-weight: 500; }
+        .links-list a:hover { color: #0066cc; text-decoration: underline; }
+        .orcid-icon { fill: #A6CE39; vertical-align: middle; }
+        footer { text-align: center; margin-top: 40px; font-size: 0.9em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="nav-container">
-            <div class="logo" style="display: flex; align-items: center; gap: 15px;">
-                <div>
-                    <h1 style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin: 0;">Pr. Amal KORRIDA</h1>
-                    <p style="font-size: 0.8rem; color: #d6e4ed; margin: 0;">Épidémiologie & Génétique Humaine | ISPITS Agadir</p>
-                </div>
-                <img src="logo-personnel.png" alt="Logo Personnel" style="height: 55px; width: auto; background-color: var(--white); padding: 4px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.15);">
-            </div>
-            <nav class="nav-menu">
-                <a href="index.html">Accueil</a>
-                <a href="enseignement.html">Enseignement</a>
-                <a href="recherche.html">Recherche</a>
-                <a href="publications.html">Publications</a>
-                <a href="ressources.html">Ressources</a>
-                <a href="institutionnel.html">Cadre &amp; Associations</a>
-                <a href="contact.html" class="active">Contact</a>
-            </nav>
-        </div>
+        <h1>Pr. Amal KORRIDA</h1>
+        <p class="subtitle">Épidémiologie & Génétique Humaine | ISPITS Agadir</p>
+        <!-- Remplacer par votre balise img réelle si nécessaire -->
+        <div style="font-weight: bold; margin: 10px 0;">[ Logo Personnel ]</div>
     </header>
 
-    <div class="container">
-        <h2 class="section-title">📬 Fiche de Contact &amp; Coordonnées Officielles</h2>
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="enseignement.html">Enseignement</a>
+        <a href="recherche.html">Recherche</a>
+        <a href="publications.html">Publications</a>
+        <a href="ressources.html">Ressources</a>
+        <a href="cadre.html">Cadre & Associations</a>
+        <a href="contact.html" style="color: #2c3e50; text-decoration: underline;">Contact</a>
+    </nav>
 
-        <div class="contact-layout">
-            <div class="contact-info-box">
-                <div class="info-item">
-                    <label>Affiliation Institutionnelle</label>
-                    <p>ISPITS d’Agadir, Centre Hospitalier Régional Hassan II, Ministère de la Santé et de la Protection Sociale, Maroc.</p>
-                </div>
+    <main class="container">
+        <h2>📬 Fiche de Contact & Coordonnées Officielles</h2>
 
-                <div class="info-item">
-                    <label>Adresses Électroniques (Courriels)</label>
-                    <a href="mailto:a.korrida@uiz.ac.ma" class="email-link">✉️ a.korrida@uiz.ac.ma</a>
-                    <a href="mailto:amalkorrida11@aol.com" class="email-link">✉️ amalkorrida11@aol.com</a>
-                </div>
-
-                <div class="info-item">
-                    <label>Réseaux Sociaux Scientifiques &amp; Académiques</label>
-                    <div class="social-grid">
-                        <a href="https://www.researchgate.net/profile/Amal-Korrida?ev=hdr_xprf" target="_blank" class="social-btn btn-researchgate">📊 Consulter mon profil ResearchGate</a>
-                        <a href="https://www.linkedin.com/in/akorrida/" target="_blank" class="social-btn btn-linkedin">💼 Me rejoindre sur LinkedIn</a>
-                        <a href="https://scholar.google.com/citations?user=L8bjMzcAAAAJ&hl=fr" target="_blank" class="social-btn btn-scholar">🎓 Profil Google Scholar / Citations</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map-box">
-                <iframe 
-                    src="https://google.com" 
-                    allowfullscreen="" 
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
+        <div class="section">
+            <h3>Affiliation Institutionnelle</h3>
+            <p>ISPITS d'Agadir, Centre Hospitalier Régional Hassan II, Ministère de la Santé et de la Protection Sociale, Maroc.</p>
         </div>
-    </div>
+
+        <div class="section">
+            <h3>Adresses Électroniques (Courriels)</h3>
+            <p>
+                ✉ <a href="mailto:a.korrida@uiz.ac.ma">a.korrida@uiz.ac.ma</a><br>
+                ✉ <a href="mailto:amalkorrida11@aol.com">amalkorrida11@aol.com</a>
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Réseaux Sociaux Scientifiques & Académiques</h3>
+            <ul class="links-list">
+                <!-- ORCID inséré ici -->
+                <li>
+                    <svg class="orcid-icon" viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947 0 .525-.422.947-.947.947-.525 0-.946-.422-.946-.947 0-.525.421-.947.946-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/>
+                    </svg>
+                    <a href="https://orcid.org" target="_blank" rel="noopener noreferrer">Identifiant ORCID : 0000-0003-2206-4964</a>
+                </li>
+                <li>📊 <a href="#" target="_blank">Consulter mon profil ResearchGate</a></li>
+                <li>💼 <a href="#" target="_blank">Me rejoindre sur LinkedIn</a></li>
+                <li>🎓 <a href="#" target="_blank">Profil Google Scholar / Citations</a></li>
+            </ul>
+        </div>
+    </main>
 
     <footer>
         <p>&copy; 2026 - Portail Éducatif du Pr. Amal KORRIDA. Tous droits réservés.</p>
