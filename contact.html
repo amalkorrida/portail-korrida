@@ -123,12 +123,12 @@ html<!DOCTYPE html>
             <div class="contact-info-box">
                 <div class="info-item">
                     <label>Affiliation Institutionnelle</label>
-                    <p>ISPITS d’Agadir, Centre Hospitalier Régional Hassan II, Route de Marrakech, Ministère de la Santé et de la Protection Sociale, Maroc.</p>
+                    <p>ISPITS d’Agadir, Centre Hospitalier Régional Hassan II, Ministère de la Santé et de la Protection Sociale, Maroc.</p>
                 </div>
 
                 <div class="info-item">
                     <label>Adresse Électronique (Courriel)</label>
-                    <a href="mailto:pr.amal.korrida.ispits@gmail.com" class="email-link">✉️ a.korrida@uiz.ac.ma</a>
+                    <a href="mailto:pr.amal.korrida.ispits@gmail.com"class="email-link">✉️ pr.amal.korrida.ispits@gmail.com</a>
                 </div>
 
                 <div class="info-item">
@@ -140,14 +140,10 @@ html<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- Colonne Droite : Formulaire de Contact Direct -->
+            <!-- Colonne Droite : Formulaire de Contact Fonctionnel (Formspree) -->
             <div class="student-form-box">
-                <form action="https://web3forms.com" method="POST" style="display: flex; flex-direction: column; gap: 1.2rem;">
+                <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.2rem;">
                     
-                    <!-- Liaison sécurisée vers pr.amal.korrida.ispits@gmail.com -->
-                    <input type="hidden" name="access_key" value="6302e1c9-6cc7-4404-b9b5-0c7da7940ce6">
-                    <input type="hidden" name="subject" value="Nouveau message - Portail Éducatif">
-
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nom">Nom Complet</label>
@@ -155,13 +151,13 @@ html<!DOCTYPE html>
                         </div>
                         <div class="form-group">
                             <label for="email">Adresse Courriel</label>
-                            <input type="email" id="email" name="email" required placeholder="Votre adresse courriel">
+                            <input type="email" id="email" name="_replyto" required placeholder="Votre adresse courriel">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="sujet">Sujet</label>
-                        <input type="text" id="sujet" name="subject_line" required placeholder="Objet de votre message">
+                        <input type="text" id="sujet" name="_subject" required placeholder="Objet de votre message">
                     </div>
                     
                     <div class="form-group">
@@ -170,6 +166,11 @@ html<!DOCTYPE html>
                     </div>
                     
                     <button type="submit" class="btn-submit">✉️ Envoyer la demande</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>© 2026 - Portail Éducatif du Pr. Amal KORRIDA. Tous droits réservés.</p>
     </footer>
