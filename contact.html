@@ -37,6 +37,7 @@ html<!DOCTYPE html>
         
         .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; }
         
+        /* Bloc Coordonnées - Cadre bleu supérieur retiré */
         .contact-info-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; }
         .info-item label { display: block; font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; margin-bottom: 0.3rem; }
         .info-item p { font-size: 1.05rem; font-weight: 500; text-align: justify; }
@@ -50,17 +51,25 @@ html<!DOCTYPE html>
         .btn-researchgate { background-color: var(--researchgate-color); }
         .btn-scholar { background-color: var(--scholar-color); }
 
-        /* Conteneur pour la photo de localisation à la place de la carte */
-        .photo-box { border-radius: 8px; overflow: hidden; box-shadow: 0 3px 8px rgba(0,0,0,0.08); border: 1px solid #ddd; background-color: var(--bg-light); display: flex; flex-direction: column; height: 100%; min-height: 450px; }
-        .photo-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .photo-caption { background-color: var(--primary-color); color: var(--white); text-align: center; padding: 0.8rem; font-size: 0.9rem; font-weight: 600; }
+        /* Bloc Formulaire Étudiants Harmonisé */
+        .student-form-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.2rem; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+        .form-group label { font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; }
+        .form-group input, .form-group textarea, .form-group select { padding: 0.7rem; border: 1px solid #ccc; border-radius: 5px; font-family: var(--font-main); font-size: 0.95rem; transition: border-color 0.2s, box-shadow 0.2s; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--secondary-color); box-shadow: 0 0 5px rgba(46, 134, 193, 0.3); }
+        
+        .btn-submit { background-color: var(--primary-color); color: var(--white); border: none; padding: 0.8rem; border-radius: 5px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: background-color 0.2s, transform 0.1s; margin-top: 0.5rem; width: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .btn-submit:hover { background-color: var(--primary-dark); transform: translateY(-1px); }
+        .btn-submit:active { transform: translateY(0); }
 
+        /* Pied de page global harmonisé */
         footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 5rem; width: 100%; }
         
         @media (max-width: 950px) { 
             .nav-container { flex-direction: column; gap: 1rem; } 
             .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
-            .photo-box { min-height: 350px; }
+            .form-row { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -91,6 +100,7 @@ html<!DOCTYPE html>
         <h2 class="section-title">📬 Fiche de Contact &amp; Coordonnées Officielles</h2>
 
         <div class="contact-layout">
+            <!-- Colonne Gauche : Informations de contact -->
             <div class="contact-info-box">
                 <div class="info-item">
                     <label>Affiliation Institutionnelle</label>
@@ -113,17 +123,38 @@ html<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- Remplacement de la carte par un conteneur photo d'illustration -->
-            <div class="photo-box">
-                <img src="localisation-ispits.png" alt="Localisation ISPITS Agadir - Route de Marrakech, près de l'Hôpital Hassan II">
-                <div class="photo-caption">📍 ISPITS Agadir - Route de Marrakech (Près du CHR Hassan II)</div>
-            </div>
-        </div>
-    </div>
+            <!-- Colonne Droite : Formulaire de contact étudiants -->
+            <form class="student-form-box" action="#" method="POST">
+                <div style="border-bottom: 2px solid #ddd; padding-bottom: 0.3rem; margin-bottom: 0.2rem;">
+                    <h3 style="color: var(--primary-color); font-size: 1.15rem; font-weight: 600;">🎓 Formulaire de correspondance</h3>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="lastname">Nom</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Ex: El Idrissi" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">Prénom</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Ex: Amine" required>
+                    </div>
+                </div>
 
-    <footer>
-        <p>&copy; 2026 - Portail Éducatif du Pr. Amal KORRIDA. Tous droits réservés.</p>
-    </footer>
+                <div class="form-group">
+                    <label for="email">Adresse Électronique (E-mail)</label>
+                    <input type="email" id="email" name="email" placeholder="votre.email@student.com" required>
+                </div>
 
-</body>
-</html>
+                <div class="form-group">
+                    <label for="subject">Objet du message</label>
+                    <select id="subject" name="subject" required>
+                        <option value="" disabled selected hidden>Choisir une option...</option>
+                        <option value="cours">Demande d'informations sur un cours</option>
+                        <option value="pfe">Suivi de PFE / Encadrement</option>
+                        <option value="absence">Justificatif ou absence</option>
+                        <option value="autre">Autre demande académique</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre message</label>
