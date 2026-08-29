@@ -18,9 +18,7 @@ html<!DOCTYPE html>
             --linkedin-color: #0077b5;
             --researchgate-color: #00ccbb;
             --scholar-color: #4285f4;
-            /* Ajout d'une couleur académique vive pour le formulaire */
-            --academic-gold: #d4ac0d;
-            --academic-gold-light: #fef9e7;
+            --orcid-color: #a6ce39;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -62,14 +60,13 @@ html<!DOCTYPE html>
         .btn-linkedin { background-color: var(--linkedin-color); }
         .btn-researchgate { background-color: var(--researchgate-color); }
         .btn-scholar { background-color: var(--scholar-color); }
+        .btn-orcid { background-color: var(--orcid-color); }
 
-        /* Formulaire Étudiant - Style d'encadré vif et académique */
         .student-form-box { 
-            background-color: var(--academic-gold-light); 
+            background-color: var(--bg-light); 
             padding: 2rem; 
             border-radius: 8px; 
-            border-left: 6px solid var(--academic-gold);
-            box-shadow: 0 4px 10px rgba(212, 172, 13, 0.1); 
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05); 
             display: flex; 
             flex-direction: column; 
             gap: 1.2rem; 
@@ -78,9 +75,9 @@ html<!DOCTYPE html>
         }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
         .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-        .form-group label { font-size: 0.75rem; font-weight: bold; color: var(--primary-color); text-transform: uppercase; }
-        .form-group input, .form-group textarea { padding: 0.7rem; border: 1px solid #d4ac0d; border-radius: 5px; font-family: var(--font-main); font-size: 0.95rem; transition: border-color 0.2s, box-shadow 0.2s; background-color: var(--white); color: var(--text-dark); }
-        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 5px rgba(26, 82, 118, 0.3); }
+        .form-group label { font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; }
+        .form-group input, .form-group textarea { padding: 0.7rem; border: 1px solid #ccc; border-radius: 5px; font-family: var(--font-main); font-size: 0.95rem; transition: border-color 0.2s, box-shadow 0.2s; background-color: var(--white); color: var(--text-dark); }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--secondary-color); box-shadow: 0 0 5px rgba(46, 134, 193, 0.3); }
         
         .form-group textarea { min-height: 140px; resize: vertical; }
         
@@ -124,7 +121,7 @@ html<!DOCTYPE html>
         <h2 class="section-title">📬 Fiche de Contact &amp; Coordonnées Officielles</h2>
 
         <div class="contact-layout">
-            <!-- Colonne Gauche : Coordonnées -->
+            <!-- Colonne Gauche : Coordonnées et Profils Sociaux Académiques (4 réseaux) -->
             <div class="contact-info-box">
                 <div class="info-item">
                     <label>Affiliation Institutionnelle</label>
@@ -143,13 +140,14 @@ html<!DOCTYPE html>
                         <a href="https://researchgate.net" target="_blank" class="social-btn btn-researchgate">📊 Consulter mon profil ResearchGate</a>
                         <a href="https://linkedin.com" target="_blank" class="social-btn btn-linkedin">💼 Me rejoindre sur LinkedIn</a>
                         <a href="https://google.com" target="_blank" class="social-btn btn-scholar">🎓 Profil Google Scholar / Citations</a>
+                        <a href="https://orcid.org" target="_blank" class="social-btn btn-orcid">🟢 Identifiant Chercheur ORCID iD</a>
                     </div>
                 </div>
             </div>
 
             <!-- Colonne Droite : Formulaire Étudiant Épuré Complet -->
             <form class="student-form-box" action="#" method="POST">
-                <div style="border-bottom: 2px solid #d4ac0d; padding-bottom: 0.3rem; margin-bottom: 0.2rem;">
+                <div style="border-bottom: 2px solid #ddd; padding-bottom: 0.3rem; margin-bottom: 0.2rem;">
                     <h3 style="color: var(--primary-color); font-size: 1.15rem; font-weight: 600;">🎓 Formulaire de correspondance</h3>
                 </div>
                 
@@ -168,7 +166,6 @@ html<!DOCTYPE html>
                     <label for="email">Adresse Électronique (E-mail)</label>
                     <input type="email" id="email" name="email" placeholder="votre.email@student.com" required>
                 </div>
- 
                     <div class="form-group">
                         <label for="sujet">Sujet</label>
                         <input type="text" id="sujet" name="_subject" required placeholder="Objet de votre message">
