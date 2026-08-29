@@ -21,7 +21,17 @@ html<!DOCTYPE html>
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-main); color: var(--text-dark); line-height: 1.6; background-color: var(--white); }
+        
+        html, body { 
+            height: auto !important; 
+            min-height: 100%; 
+            overflow-y: visible !important; 
+            font-family: var(--font-main); 
+            color: var(--text-dark); 
+            line-height: 1.6; 
+            background-color: var(--white); 
+        }
+        
         a { text-decoration: none; }
         
         header { background-color: var(--primary-color); color: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
@@ -32,13 +42,12 @@ html<!DOCTYPE html>
         .nav-menu a { color: var(--white); font-size: 0.95rem; padding: 0.5rem 0.2rem; transition: all 0.2s; }
         .nav-menu a.active { border-bottom: 2px solid var(--white); font-weight: 600; }
 
-        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; height: auto !important; }
         .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.4rem; }
         
-        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; }
+        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; height: auto !important; }
         
-        /* Bloc Coordonnées - Cadre bleu supérieur retiré */
-        .contact-info-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; }
+        .contact-info-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; height: auto !important; }
         .info-item label { display: block; font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; margin-bottom: 0.3rem; }
         .info-item p { font-size: 1.05rem; font-weight: 500; text-align: justify; }
         .email-link { color: var(--secondary-color); font-weight: 600; display: block; margin-top: 0.2rem; font-size: 1.05rem; }
@@ -51,20 +60,30 @@ html<!DOCTYPE html>
         .btn-researchgate { background-color: var(--researchgate-color); }
         .btn-scholar { background-color: var(--scholar-color); }
 
-        /* Bloc Formulaire Étudiants Harmonisé */
-        .student-form-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.2rem; }
+        .student-form-box { 
+            background-color: var(--bg-light); 
+            padding: 2rem; 
+            border-radius: 8px; 
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05); 
+            display: flex; 
+            flex-direction: column; 
+            gap: 1.2rem; 
+            height: auto !important; 
+            overflow: visible !important; 
+        }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
         .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
         .form-group label { font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; }
-        .form-group input, .form-group textarea, .form-group select { padding: 0.7rem; border: 1px solid #ccc; border-radius: 5px; font-family: var(--font-main); font-size: 0.95rem; transition: border-color 0.2s, box-shadow 0.2s; }
+        .form-group input, .form-group textarea, .form-group select { padding: 0.7rem; border: 1px solid #ccc; border-radius: 5px; font-family: var(--font-main); font-size: 0.95rem; transition: border-color 0.2s, box-shadow 0.2s; background-color: var(--white); }
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--secondary-color); box-shadow: 0 0 5px rgba(46, 134, 193, 0.3); }
+        
+        .form-group textarea { min-height: 140px; resize: vertical; }
         
         .btn-submit { background-color: var(--primary-color); color: var(--white); border: none; padding: 0.8rem; border-radius: 5px; font-weight: bold; font-size: 1rem; cursor: pointer; transition: background-color 0.2s, transform 0.1s; margin-top: 0.5rem; width: 100%; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .btn-submit:hover { background-color: var(--primary-dark); transform: translateY(-1px); }
         .btn-submit:active { transform: translateY(0); }
 
-        /* Pied de page global harmonisé */
-        footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 5rem; width: 100%; }
+        footer { background-color: var(--primary-dark); color: var(--white); text-align: center; padding: 1.5rem 0; margin-top: 5rem; width: 100%; clear: both; }
         
         @media (max-width: 950px) { 
             .nav-container { flex-direction: column; gap: 1rem; } 
@@ -100,7 +119,7 @@ html<!DOCTYPE html>
         <h2 class="section-title">📬 Fiche de Contact &amp; Coordonnées Officielles</h2>
 
         <div class="contact-layout">
-            <!-- Colonne Gauche : Informations de contact -->
+            <!-- Colonne Gauche -->
             <div class="contact-info-box">
                 <div class="info-item">
                     <label>Affiliation Institutionnelle</label>
@@ -123,7 +142,7 @@ html<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- Colonne Droite : Formulaire de contact étudiants -->
+            <!-- Colonne Droite -->
             <form class="student-form-box" action="#" method="POST">
                 <div style="border-bottom: 2px solid #ddd; padding-bottom: 0.3rem; margin-bottom: 0.2rem;">
                     <h3 style="color: var(--primary-color); font-size: 1.15rem; font-weight: 600;">🎓 Formulaire de correspondance</h3>
@@ -149,12 +168,4 @@ html<!DOCTYPE html>
                     <label for="subject">Objet du message</label>
                     <select id="subject" name="subject" required>
                         <option value="" disabled selected hidden>Choisir une option...</option>
-                        <option value="cours">Demande d'informations sur un cours</option>
-                        <option value="pfe">Suivi de PFE / Encadrement</option>
-                        <option value="absence">Justificatif ou absence</option>
-                        <option value="autre">Autre demande académique</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Votre message</label>
+                        <option value="cours">Demande d'informations sur un cours<
