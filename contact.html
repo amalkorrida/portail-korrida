@@ -141,10 +141,14 @@ html<!DOCTYPE html>
                 </div>
             </div>
 
-            <!-- Colonne Droite : Formulaire de Contact Fonctionnel (Formspree) -->
+            <!-- Colonne Droite : Formulaire de Contact Direct -->
             <div class="student-form-box">
-                <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.2rem;">
+                <form action="https://web3forms.com" method="POST" style="display: flex; flex-direction: column; gap: 1.2rem;">
                     
+                    <!-- Liaison sécurisée vers pr.amal.korrida.ispits@gmail.com -->
+                    <input type="hidden" name="access_key" value="6302e1c9-6cc7-4404-b9b5-0c7da7940ce6">
+                    <input type="hidden" name="subject" value="Nouveau message - Portail Éducatif">
+
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nom">Nom Complet</label>
@@ -152,13 +156,13 @@ html<!DOCTYPE html>
                         </div>
                         <div class="form-group">
                             <label for="email">Adresse Courriel</label>
-                            <input type="email" id="email" name="_replyto" required placeholder="Votre adresse courriel">
+                            <input type="email" id="email" name="email" required placeholder="Votre adresse courriel">
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label for="sujet">Sujet</label>
-                        <input type="text" id="sujet" name="_subject" required placeholder="Objet de votre message">
+                        <input type="text" id="sujet" name="subject_line" required placeholder="Objet de votre message">
                     </div>
                     
                     <div class="form-group">
@@ -167,11 +171,6 @@ html<!DOCTYPE html>
                     </div>
                     
                     <button type="submit" class="btn-submit">✉️ Envoyer la demande</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <footer>
         <p>© 2026 - Portail Éducatif du Pr. Amal KORRIDA. Tous droits réservés.</p>
     </footer>
