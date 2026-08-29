@@ -18,6 +18,9 @@ html<!DOCTYPE html>
             --linkedin-color: #0077b5;
             --researchgate-color: #00ccbb;
             --scholar-color: #4285f4;
+            /* Ajout d'une couleur académique vive pour le formulaire */
+            --academic-gold: #d4ac0d;
+            --academic-gold-light: #fef9e7;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,7 +48,7 @@ html<!DOCTYPE html>
         .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 3rem 0; height: auto !important; }
         .section-title { color: var(--primary-color); margin-bottom: 2rem; border-bottom: 2px solid var(--bg-light); padding-bottom: 0.5rem; text-transform: uppercase; font-size: 1.4rem; }
         
-        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; height: auto !important; margin-bottom: 3rem; }
+        .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; height: auto !important; }
         
         .contact-info-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; height: auto !important; }
         .info-item label { display: block; font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; margin-bottom: 0.3rem; }
@@ -60,11 +63,13 @@ html<!DOCTYPE html>
         .btn-researchgate { background-color: var(--researchgate-color); }
         .btn-scholar { background-color: var(--scholar-color); }
 
+        /* Formulaire Étudiant - Style d'encadré vif et académique */
         .student-form-box { 
-            background-color: var(--bg-light); 
+            background-color: var(--academic-gold-light); 
             padding: 2rem; 
             border-radius: 8px; 
-            box-shadow: 0 3px 6px rgba(0,0,0,0.05); 
+            border-left: 6px solid var(--academic-gold);
+            box-shadow: 0 4px 10px rgba(212, 172, 13, 0.1); 
             display: flex; 
             flex-direction: column; 
             gap: 1.2rem; 
@@ -73,9 +78,9 @@ html<!DOCTYPE html>
         }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
         .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-        .form-group label { font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; }
-        .form-group input, .form-group textarea { padding: 0.7rem; border: 1px solid #ccc; border-radius: 5px; font-family: var(--font-main); font-size: 0.95rem; transition: border-color 0.2s, box-shadow 0.2s; background-color: var(--white); color: var(--text-dark); }
-        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--secondary-color); box-shadow: 0 0 5px rgba(46, 134, 193, 0.3); }
+        .form-group label { font-size: 0.75rem; font-weight: bold; color: var(--primary-color); text-transform: uppercase; }
+        .form-group input, .form-group textarea { padding: 0.7rem; border: 1px solid #d4ac0d; border-radius: 5px; font-family: var(--font-main); font-size: 0.95rem; transition: border-color 0.2s, box-shadow 0.2s; background-color: var(--white); color: var(--text-dark); }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 5px rgba(26, 82, 118, 0.3); }
         
         .form-group textarea { min-height: 140px; resize: vertical; }
         
@@ -127,36 +132,43 @@ html<!DOCTYPE html>
                 </div>
 
                 <div class="info-item">
-                    <label>Adresse Électronique (Courriel)</label>
-                    <a href="mailto:pr.amal.korrida.ispits@gmail.com"class="email-link">✉️ pr.amal.korrida.ispits@gmail.com</a>
+                    <label>Adresses Électroniques (Courriels)</label>
+                    <a href="mailto:a.korrida@uiz.ac.ma" class="email-link">✉️ a.korrida@uiz.ac.ma</a>
+                    <a href="mailto:amalkorrida11@aol.com" class="email-link">✉️ amalkorrida11@aol.com</a>
                 </div>
 
                 <div class="info-item">
                     <label>Réseaux Sociaux Scientifiques &amp; Académiques</label>
                     <div class="social-grid">
-                        <a href="https://www.researchgate.net/profile/Amal-Korrida?ev=hdr_xprf" target="_blank" class="social-btn btn-researchgate">📊 Consulter mon profil ResearchGate</a>
-                        <a href="https://www.linkedin.com/in/akorrida/" target="_blank" class="social-btn btn-linkedin">💼 Me rejoindre sur LinkedIn</a>
-                        <a href="https://scholar.google.com/citations?user=L8bjMzcAAAAJ&hl=fr" target="_blank" class="social-btn btn-scholar">🎓 Profil Google Scholar / Citations</a>
-                        <a href="https://orcid.org" target="_blank" class="social-btn btn-orcid">🟢 Explorer mon identifiant ORCID</a>
+                        <a href="https://researchgate.net" target="_blank" class="social-btn btn-researchgate">📊 Consulter mon profil ResearchGate</a>
+                        <a href="https://linkedin.com" target="_blank" class="social-btn btn-linkedin">💼 Me rejoindre sur LinkedIn</a>
+                        <a href="https://google.com" target="_blank" class="social-btn btn-scholar">🎓 Profil Google Scholar / Citations</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Colonne Droite : Formulaire de Contact Fonctionnel (Formspree) -->
-            <div class="student-form-box">
-                <form action="https://formspree.io" method="POST" style="display: flex; flex-direction: column; gap: 1.2rem;">
-                    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="nom">Nom Complet</label>
-                            <input type="text" id="nom" name="name" required placeholder="Votre nom">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Adresse Courriel</label>
-                            <input type="email" id="email" name="_replyto" required placeholder="Votre adresse courriel">
-                        </div>
+            <!-- Colonne Droite : Formulaire Étudiant Épuré Complet -->
+            <form class="student-form-box" action="#" method="POST">
+                <div style="border-bottom: 2px solid #d4ac0d; padding-bottom: 0.3rem; margin-bottom: 0.2rem;">
+                    <h3 style="color: var(--primary-color); font-size: 1.15rem; font-weight: 600;">🎓 Formulaire de correspondance</h3>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="lastname">Nom</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Ex: El Idrissi" required>
                     </div>
-                    
+                    <div class="form-group">
+                        <label for="firstname">Prénom</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Ex: Amine" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse Électronique (E-mail)</label>
+                    <input type="email" id="email" name="email" placeholder="votre.email@student.com" required>
+                </div>
+ 
                     <div class="form-group">
                         <label for="sujet">Sujet</label>
                         <input type="text" id="sujet" name="_subject" required placeholder="Objet de votre message">
