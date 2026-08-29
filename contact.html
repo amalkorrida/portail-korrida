@@ -37,7 +37,8 @@ html<!DOCTYPE html>
         
         .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 1rem; }
         
-        .contact-info-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; border-top: 5px solid var(--primary-color); box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; }
+        /* Suppression de la bordure bleue supérieure (border-top) */
+        .contact-info-box { background-color: var(--bg-light); padding: 2rem; border-radius: 8px; box-shadow: 0 3px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; gap: 1.5rem; }
         .info-item label { display: block; font-size: 0.75rem; font-weight: bold; color: #7f8c8d; text-transform: uppercase; margin-bottom: 0.3rem; }
         .info-item p { font-size: 1.05rem; font-weight: 500; text-align: justify; }
         .email-link { color: var(--secondary-color); font-weight: 600; display: block; margin-top: 0.2rem; font-size: 1.05rem; }
@@ -109,6 +110,16 @@ html<!DOCTYPE html>
                         <a href="https://www.linkedin.com/in/akorrida/" target="_blank" class="social-btn btn-linkedin">💼 Me rejoindre sur LinkedIn</a>
                         <a href="https://scholar.google.com/citations?user=L8bjMzcAAAAJ&hl=fr" target="_blank" class="social-btn btn-scholar">🎓 Profil Google Scholar / Citations</a>
                     </div>
+                </div>
+            </div>
+
+            <!-- Intégration de la carte de localisation (Google Maps) pour occuper la deuxième colonne -->
+            <div class="map-box">
+                <iframe src="https://google.com" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <p>&copy; 2026 - Portail Éducatif du Pr. Amal KORRIDA. Tous droits réservés.</p>
     </footer>
